@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice.Home;
+package snow.app.ideeleeservice.home;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

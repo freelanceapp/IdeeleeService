@@ -1,13 +1,15 @@
-package snow.app.ideeleeservice;
+package snow.app.ideeleeservice.login;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import snow.app.ideeleeservice.otp.OTP;
+import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.register.Register;
 import snow.app.ideeleeservice.forgot.ForgotPassword;
 
 public class Login extends Activity {
@@ -27,7 +29,7 @@ public class Login extends Activity {
         txt_registernow_loginPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_register=new Intent(Login.this,Register.class);
+                Intent intent_register=new Intent(Login.this, Register.class);
                 startActivity(intent_register);
             }
         });

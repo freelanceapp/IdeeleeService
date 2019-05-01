@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice;
+package snow.app.ideeleeservice.splash;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
+
+import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.login.Login;
 
 public class Splash extends Activity {
 

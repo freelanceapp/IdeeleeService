@@ -8,7 +8,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
-import snow.app.ideeleeservice.Login;
+import snow.app.ideeleeservice.login.Login;
 import snow.app.ideeleeservice.R;
 
 

@@ -10,20 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Home.HomeNavigation"
+            android:name=".home.HomeNavigation"
             android:label="@string/title_activity_home_navigation"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Register"
+        <activity android:name=".register.Register"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".Login"
+        <activity android:name=".login.Login"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".AddAddress"
+        <activity android:name=".address.AddAddress"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".OTP"
+        <activity android:name=".otp.OTP"
             android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".forgot.ForgotPassword"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".Splash">
+        <activity android:name=".splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

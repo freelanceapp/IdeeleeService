@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice;
+package snow.app.ideeleeservice.address;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +10,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
-import snow.app.ideeleeservice.Home.HomeNavigation;
+import snow.app.ideeleeservice.home.HomeNavigation;
+import snow.app.ideeleeservice.R;
 
 
 public class AddAddress extends AppCompatActivity implements OnMapReadyCallback {

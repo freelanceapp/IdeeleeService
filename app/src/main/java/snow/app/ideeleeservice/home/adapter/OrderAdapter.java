@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice.Adapters;
+package snow.app.ideeleeservice.home.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
