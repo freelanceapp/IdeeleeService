@@ -59,39 +59,83 @@
                     android:textSize="@dimen/text_size_15sp"/>
             </LinearLayout>
         </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:padding="@dimen/margin_4dp"
+        android:id="@+id/title"
+        android:text="PLUMBER -FOR 2 HOURS"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/regular"
+        android:text="08-10 AM"
+        android:id="@+id/time"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:paddingTop="@dimen/margin_4dp"
+        android:paddingBottom="@dimen/margin_4dp"
+        android:paddingRight="@dimen/margin_10dp"
+        android:background="@drawable/round_corner_colorprimary"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_13sp"
+        />
+</RelativeLayout>
 
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/regular"
-                android:padding="@dimen/margin_4dp"
-                android:text=" JACK HARRY"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_15sp"
-                />
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:fontFamily="@font/regular"-->
+                <!--android:padding="@dimen/margin_4dp"-->
+                <!--android:text=" JACK HARRY"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="@dimen/text_size_15sp"-->
+                <!--/>-->
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:id="@+id/ordersummary"
             android:fontFamily="@font/regular"
-
+android:visibility="gone"
             android:padding="@dimen/margin_4dp"
             android:drawablePadding="@dimen/margin_4dp"
             android:text="American Burger X1, American Burger X2"
             android:textSize="@dimen/text_size_15sp" />
+<RelativeLayout
+    android:layout_width="match_parent"
 
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/im"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:src="@drawable/ic_brightness_1_black_24dp"
+        android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+android:layout_toRightOf="@+id/im"
+            android:paddingLeft="@dimen/margin_4dp"
+            android:layout_height="wrap_content">
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:fontFamily="@font/regular"
-            android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
-            android:padding="@dimen/margin_4dp"
-            android:drawablePadding="@dimen/margin_4dp"
-            android:text="Deliver To"
+
+            android:text="Job Location"
             android:textSize="@dimen/text_size_15sp" />
         <TextView
             android:fontFamily="@font/regular"
@@ -110,8 +154,11 @@
             android:text="530-225-3426"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_15sp" />
+        </LinearLayout>
+</RelativeLayout>
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin_20dp"
             android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -144,13 +191,13 @@
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/txt_by"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Status:"
+                    android:text="By:"
                     android:fontFamily="@font/regular"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_15sp" />
@@ -161,9 +208,9 @@
                     android:gravity="left"
                     android:fontFamily="@font/regular"
                     android:padding="@dimen/margin_4dp"
-                    android:id="@+id/status"
-                    android:text="Pending"
-                    android:textColor="@color/orange"
+                    android:id="@+id/name"
+                    android:text="Jack Harry"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/text_size_15sp" />
             </LinearLayout>
         </RelativeLayout>
@@ -175,45 +222,61 @@
             android:weightSum="3"
             android:id="@+id/linearlayout_button"
             android:padding="@dimen/margin_10dp">
-        <Button
-            android:id="@+id/ux_btnjobdone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/regular"
-            android:background="@drawable/round_edittext_blueborder"
-            android:text="View"
-            android:layout_marginRight="@dimen/margin_10dp"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/text_size_19sp" />
+
+            <TextView
+                android:id="@+id/txt_callnow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_weight="1"
+              android:padding="@dimen/margin_8dp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/regular"
+                android:drawableStart="@drawable/call_"
+                android:paddingStart="@dimen/margin_8dp"
+                android:drawablePadding="@dimen/margin_4dp"
+                android:background="@drawable/round_edittext_blueborder"
+                android:text="Call Now"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/small_txt"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:drawableLeft="@drawable/call_"
+                android:paddingLeft="@dimen/margin_8dp" />
 
 
-
-            <Button
-                android:id="@+id/ux_btn2"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/regular"
                 android:background="@drawable/round_corner_green_solid"
-                android:text="Accept"
+                android:text="Accept Job"
+               android:paddingTop="@dimen/small_padding"
+                android:paddingBottom="@dimen/small_padding"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
                 android:layout_marginRight="@dimen/margin_10dp"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_19sp" />
+                android:textSize="@dimen/small_txt" />
 
-            <Button
+            <TextView
                 android:id="@+id/ux_btn1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:fontFamily="@font/regular"
                 android:background="@drawable/round_corner_red_solid"
                 android:text="Reject"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="@dimen/small_padding"
+                android:paddingBottom="@dimen/small_padding"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_size_19sp" />
+                android:textSize="@dimen/small_txt" />
         </LinearLayout>
 
 </LinearLayout>

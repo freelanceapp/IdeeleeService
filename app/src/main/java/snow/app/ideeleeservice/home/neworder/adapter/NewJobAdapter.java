@@ -1,12 +1,14 @@
 package snow.app.ideeleeservice.home.neworder.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -32,31 +34,49 @@ public class NewJobAdapter extends RecyclerView.Adapter<NewJobAdapter.ProductVie
     public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
-        View view = inflater.inflate(R.layout.home_row, parent, false);
+        View view = inflater.inflate(R.layout.new_orders_row, parent, false);
         return new ProductViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final ProductViewHolder holder, int position) {
+    public void onBindViewHolder(ProductViewHolder holder, int position) {
         //getting the product of the specified position
 
+        if (position == 0) {
+            holder.ordersummary.setVisibility(View.VISIBLE);
+            holder.title.setText("Jack Harry");
+            holder.by.setText("Status:");
+            holder.name.setText("Pending");
+            holder.name.setTextColor(ContextCompat.getColor(mCtx,R.color.orange));
+            holder.txt_callnow.setText("View");
+            holder.time.setVisibility(View.GONE);
+            holder.txt_callnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+            holder.txt_callnow.setGravity(Gravity.CENTER);
 
+        }
 
     }
 
 
     @Override
     public int getItemCount() {
-        return 5;
+        return productList.size();
     }
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-    CheckBox check;
+        TextView ordersummary, title, by, time, txt_callnow, name;
 
 
         public ProductViewHolder(View itemView) {
             super(itemView);
+            ordersummary = itemView.findViewById(R.id.ordersummary);
+            title = itemView.findViewById(R.id.title);
+            by = itemView.findViewById(R.id.txt_by);
+            name = itemView.findViewById(R.id.name);
+
+            txt_callnow = itemView.findViewById(R.id.txt_callnow);
+            time = itemView.findViewById(R.id.time);
 
 
         }
