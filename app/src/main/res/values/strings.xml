@@ -88,4 +88,7 @@
     <string name="terms_conditions"><![CDATA[TERMS & CONDITIONS]]></string>
     <string name="monthly">MONTHLY</string>
     <string name="help_supports"><![CDATA[Help & Supports]]></string>
+    <string name="skip">Skip</string>
+    <string name="on_demand_services">On Demand Services</string>
+    <string name="delivery_services">Delivery Services</string>
 </resources>

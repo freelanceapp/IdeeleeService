@@ -3,6 +3,7 @@
     package="snow.app.ideeleeservice">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,20 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".home.HomeNavigation">
+        <activity android:name=".serviceselection.MoreOnDemand"></activity>
+                 <activity android:name=".serviceselection.ServiceSelectorActivity"/>
+        <activity android:name=".splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-   <!--     <activity
+        <activity
             android:name=".home.HomeNavigation"
             android:label="@string/title_activity_home_navigation"
-            android:theme="@style/AppTheme.NoActionBar" />-->
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".register.Register"
             android:windowSoftInputMode="adjustPan" />
