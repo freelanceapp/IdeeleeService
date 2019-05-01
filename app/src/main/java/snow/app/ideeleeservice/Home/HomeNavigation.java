@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice;
+package snow.app.ideeleeservice.Home;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import snow.app.ideeleeservice.R;
 
 public class HomeNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
