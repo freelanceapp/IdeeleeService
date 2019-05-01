@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@color/lightbgblue"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/margin_4dp"
+        android:layout_margin="@dimen/margin_4dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="@dimen/margin_4dp"
+                android:fontFamily="@font/regular"
+                android:text="APR 22, 2018 02:22PM"
+
+                android:textSize="@dimen/text_size_13sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right|center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="@dimen/margin_4dp"
+                    android:text="Payment:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_13sp" />
+
+                <TextView
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="@dimen/margin_4dp"
+                    android:text="Cash"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="@dimen/text_size_15sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:padding="@dimen/margin_4dp"
+                android:text=" JACK HARRY"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15sp"
+                />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/regular"
+
+            android:padding="@dimen/margin_4dp"
+            android:drawablePadding="@dimen/margin_4dp"
+            android:text="American Burger X1, American Burger X2"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/regular"
+            android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
+            android:padding="@dimen/margin_4dp"
+            android:drawablePadding="@dimen/margin_4dp"
+            android:text="Deliver To"
+            android:textSize="@dimen/text_size_15sp" />
+        <TextView
+            android:fontFamily="@font/regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="@dimen/margin_4dp"
+            android:text="District 2 1323 Riverside Drive Redding"
+            android:textSize="@dimen/text_size_15sp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_4dp"
+            android:fontFamily="@font/regular"
+            android:text="530-225-3426"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_15sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="@dimen/margin_4dp"
+                    android:text="Order ID :"
+                    android:fontFamily="@font/regular"
+
+                    android:textSize="@dimen/text_size_15sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:fontFamily="@font/regular"
+                    android:padding="@dimen/margin_4dp"
+                    android:text="TS15458"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:padding="@dimen/margin_4dp"
+                    android:text="Status:"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_15sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:fontFamily="@font/regular"
+                    android:padding="@dimen/margin_4dp"
+                    android:id="@+id/status"
+                    android:text="Preparing"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_size_15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/linearlayout_button"
+            android:padding="@dimen/margin_10dp">
+        <Button
+            android:id="@+id/ux_btnjobdone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/regular"
+            android:background="@drawable/round_edittext_blueborder"
+            android:text="View"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_19sp" />
+
+            <Button
+                android:id="@+id/ux_btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/regular"
+                android:background="@drawable/round_corner_green_solid"
+                android:text="Dispatched"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_19sp" />
+
+        </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

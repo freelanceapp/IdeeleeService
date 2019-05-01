@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightbgblue"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/round_corner_edittext"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="right"
+            android:fontFamily="@font/regular"
+
+            android:text="Featured"
+            android:background="@color/red"
+            android:paddingRight="@dimen/margin_8dp"
+            android:paddingLeft="@dimen/margin_8dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:textStyle="bold" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:id="@+id/servicetype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="@font/regular"
+                android:padding="@dimen/margin_4dp"
+                android:text="@string/monthly"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/regular"
+                android:padding="@dimen/margin_4dp"
+                android:text="Valid 30 Days"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_15sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:buttonTint="@color/orange"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/orange"
+            android:text="2 On Demand Services"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/orange"
+            android:text="1 Delivery Service"
+            android:backgroundTint="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/ux_txt_ratenow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+
+                android:fontFamily="@font/regular"
+                android:text="$ 150.00 Paid"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_27sp"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
