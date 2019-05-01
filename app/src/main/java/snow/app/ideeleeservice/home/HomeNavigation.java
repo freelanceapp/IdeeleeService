@@ -25,6 +25,7 @@ import com.squareup.picasso.Picasso;
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.help.HelpActivity;
+import snow.app.ideeleeservice.home.fragment.OrderFragment;
 import snow.app.ideeleeservice.profile.ProfileFragment;
 
 public class HomeNavigation extends AppCompatActivity
@@ -36,7 +37,7 @@ public class HomeNavigation extends AppCompatActivity
         setContentView(R.layout.activity_home_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.inflateMenu(R.menu.home_navigation);
-
+            setFragment(new OrderFragment(),"Home");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
