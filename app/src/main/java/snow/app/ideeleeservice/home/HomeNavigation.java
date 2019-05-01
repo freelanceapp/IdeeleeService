@@ -1,19 +1,31 @@
 package snow.app.ideeleeservice.home;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
+import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.help.HelpActivity;
+import snow.app.ideeleeservice.profile.ProfileFragment;
 
 public class HomeNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,16 +35,7 @@ public class HomeNavigation extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        toolbar.inflateMenu(R.menu.home_navigation);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -40,8 +43,26 @@ public class HomeNavigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View v=navigationView.getHeaderView(0);
+        ImageView img=v.findViewById(R.id.img);
+        WindowManager wm = (WindowManager)getSystemService(WINDOW_SERVICE);
+        final DisplayMetrics displayMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(displayMetrics);
+        int height = displayMetrics.heightPixels;
+        int width = displayMetrics.widthPixels;
+
+
+        Picasso.with(this)
+                .load("https://pbs.twimg.com/profile_images/572905100960485376/GK09QnNG.jpeg")
+                .resize(width / 5, width / 5)
+                .transform(new CircleTransform())
+                .centerCrop()
+                .into(img);
+
     }
 
     @Override
@@ -83,7 +104,7 @@ public class HomeNavigation extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.edit_profile) {
-            // Handle the camera action
+            setFragment(new ProfileFragment(), "Edit Profile");
         } else if (id == R.id.manageservices) {
 
         } else if (id == R.id.products) {
@@ -97,6 +118,7 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.storeinfo) {
         } else if (id == R.id.manageaddress) {
         } else if (id == R.id.helpsupport) {
+            startActivity(new Intent(HomeNavigation.this, HelpActivity.class));
         } else if (id == R.id.editpassword) {
         } else if (id == R.id.logout) {
 
@@ -105,5 +127,15 @@ public class HomeNavigation extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+        // public method to replace fragment on home screen
+    public void setFragment(Fragment fragment, String title) {
+        TextView tv=findViewById(R.id.title);
+        tv.setText(title);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction()
+                .replace(R.id.content_frame, fragment, title);
+        fragmentTransaction.commit();
     }
 }
