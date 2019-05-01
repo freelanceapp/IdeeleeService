@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import snow.app.ideeleeservice.home.fragment.AcceptedOrderFragment;
-import snow.app.ideeleeservice.home.fragment.InProgressOrderFragment;
-import snow.app.ideeleeservice.home.fragment.NewOrderFragment;
+import snow.app.ideeleeservice.home.accepted.AcceptedOrderFragment;
+import snow.app.ideeleeservice.home.progressfra.ProgressOrderFragment;
+import snow.app.ideeleeservice.home.neworder.NewOrderFragment;
 
 
 public class OrderAdapter extends FragmentStatePagerAdapter {
@@ -28,10 +28,10 @@ public class OrderAdapter extends FragmentStatePagerAdapter {
                 AcceptedOrderFragment tab2 = new AcceptedOrderFragment();
                 return tab2;
             case 2:
-                InProgressOrderFragment tab3= new InProgressOrderFragment();
+                ProgressOrderFragment tab3= new ProgressOrderFragment();
                 return tab3;
             case 3:
-                InProgressOrderFragment tab4= new InProgressOrderFragment();
+                ProgressOrderFragment tab4= new ProgressOrderFragment();
                 return tab4;
 
 

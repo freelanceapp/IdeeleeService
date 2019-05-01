@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +24,7 @@ import com.squareup.picasso.Picasso;
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.help.HelpActivity;
-import snow.app.ideeleeservice.home.fragment.OrderFragment;
+import snow.app.ideeleeservice.home.homefiles.OrderHomeFragment;
 import snow.app.ideeleeservice.profile.ProfileFragment;
 
 public class HomeNavigation extends AppCompatActivity
@@ -37,7 +36,7 @@ public class HomeNavigation extends AppCompatActivity
         setContentView(R.layout.activity_home_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.inflateMenu(R.menu.home_navigation);
-            setFragment(new OrderFragment(),"Home");
+            setFragment(new OrderHomeFragment(),"Home");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

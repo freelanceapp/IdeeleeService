@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice.home.fragment;
+package snow.app.ideeleeservice.home.homefiles;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -12,7 +12,7 @@ import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.adapter.OrderAdapter;
 
 
-public class OrderFragment extends Fragment {
+public class OrderHomeFragment extends Fragment {
 
 
     OrderAdapter adapter;

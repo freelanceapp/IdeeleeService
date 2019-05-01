@@ -1,19 +1,17 @@
-package snow.app.ideeleeservice.home.adapter;
+package snow.app.ideeleeservice.home.neworder.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
 import java.util.List;
 
 import snow.app.ideeleeservice.R;
 
 
-public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.ProductViewHolder> {
+public class NewJobAdapter extends RecyclerView.Adapter<NewJobAdapter.ProductViewHolder> {
 
 
     //this context we will use to inflate the layout
@@ -23,7 +21,7 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
     private List<String> productList;
 
     //getting the context and product list with constructor
-    public AcceptedJobAdapter(Context mCtx, List<String> productList) {
+    public NewJobAdapter(Context mCtx, List<String> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
     }

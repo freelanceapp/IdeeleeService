@@ -1,17 +1,15 @@
-package snow.app.ideeleeservice.home.adapter;
+package snow.app.ideeleeservice.home.progressfra.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
 import java.util.List;
 import snow.app.ideeleeservice.R;
 
-public class InProgressJobAdapter extends RecyclerView.Adapter<InProgressJobAdapter.ProductViewHolder> {
+public class JobProgressAdapter extends RecyclerView.Adapter<JobProgressAdapter.ProductViewHolder> {
 
 
     //this context we will use to inflate the layout
@@ -21,7 +19,7 @@ public class InProgressJobAdapter extends RecyclerView.Adapter<InProgressJobAdap
     private List<String> productList;
 
     //getting the context and product list with constructor
-    public InProgressJobAdapter(Context mCtx, List<String> productList) {
+    public JobProgressAdapter(Context mCtx, List<String> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
     }
