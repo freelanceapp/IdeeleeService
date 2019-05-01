@@ -12,6 +12,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 import snow.app.ideeleeservice.home.HomeNavigation;
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.serviceselection.ServiceSelectorActivity;
 
 
 public class AddAddress extends AppCompatActivity implements OnMapReadyCallback {
@@ -38,12 +39,13 @@ public class AddAddress extends AppCompatActivity implements OnMapReadyCallback 
         findViewById(R.id.txt_confirmlocation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity( new Intent(AddAddress.this, HomeNavigation.class));
+               startActivity( new Intent(AddAddress.this, ServiceSelectorActivity.class));
             }
-        }); findViewById(R.id.ux_btn1).setOnClickListener(new View.OnClickListener() {
+        });
+        findViewById(R.id.ux_btn1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity( new Intent(AddAddress.this, HomeNavigation.class));
+               startActivity( new Intent(AddAddress.this, ServiceSelectorActivity.class));
             }
         });
  findViewById(R.id.backbutton1).setOnClickListener(new View.OnClickListener() {

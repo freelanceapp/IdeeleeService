@@ -1,15 +1,18 @@
 package snow.app.ideeleeservice.serviceselection;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.home.HomeNavigation;
 import snow.app.ideeleeservice.serviceselection.adapter.DeliveryServiceAdapter;
 import snow.app.ideeleeservice.serviceselection.adapter.OnDemandAdapter;
 
@@ -48,5 +51,11 @@ public class ServiceSelectorActivity extends AppCompatActivity {
         onDemandAdapter= new OnDemandAdapter(this,productList);
         ondemand_rv.setAdapter(onDemandAdapter);
         onDemandAdapter.notifyDataSetChanged();
+        skip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ServiceSelectorActivity.this, HomeNavigation.class));
+            }
+        });
     }
 }
