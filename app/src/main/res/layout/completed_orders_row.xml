@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:focusableInTouchMode="true"
     android:clickable="true"
+    android:id="@+id/parent"
     android:foreground="?android:attr/selectableItemBackground"
     android:background="@color/lightbgblue"
     android:layout_height="wrap_content">

@@ -41,6 +41,7 @@
                 android:layout_marginTop="@dimen/med_padding"
                 android:background="@drawable/round_corner_ed_graystroke"
                 android:minLines="5"
+                android:padding="@dimen/small_padding"
                 android:fontFamily="@font/regular"
                 android:gravity="top"
                 android:hint="@string/terms_condition_"/>

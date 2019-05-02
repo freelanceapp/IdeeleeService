@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg_blue"
+    android:orientation="vertical"
+    tools:context=".coupons.CouponDetails">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/toolbar_child" />
+
+    <ImageView
+        android:id="@+id/img_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@color/white"
+        android:src="@drawable/c2" />
+
+    <ScrollView
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img_coupon"
+        android:layout_marginLeft="@dimen/margin_4dp"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_marginRight="@dimen/margin_4dp"
+        android:layout_marginBottom="@dimen/margin_4dp"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="@dimen/margin_10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_conditions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_19sp" />
+
+
+            <TextView
+                android:id="@+id/coupondetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginBottom="@dimen/margin_20dp"
+                android:padding="@dimen/margin_8dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_15sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/med_padding"
+        android:weightSum="2">
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner_colorprimary"
+            android:fontFamily="@font/semibold"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_19sp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="Remove"
+            android:layout_margin="@dimen/small_padding"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_corner_red_solid"
+            android:fontFamily="@font/semibold"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_19sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -11,27 +11,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".servicepackages.MyPackageDetails"></activity>
+        <activity android:name=".home.OrderDetails"></activity>
+        <activity
+            android:name=".coupons.AddCouponDetails"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".servicepackages.MyPackageDetails"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".services.Services" />
-        <activity android:name=".servicepackages.ServicePackages" />
+        <activity
+            android:name=".servicepackages.ServicePackages"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name=".products.productlist.ProductListActivity" />
-        <activity android:name=".coupons.SelectCouponLyout"></activity>
-        <activity android:name=".coupons.AddCustomCoupon"
-            android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".coupons.CouponsListing"></activity>
+        <activity android:name=".coupons.SelectCouponLyout" />
+        <activity
+            android:name=".coupons.AddCustomCoupon"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".coupons.CouponsListing" />
         <activity android:name=".servicepricing.ServicePricingActivity" />
-
         <activity android:name=".serviceselection.DelieveryService" />
         <activity
             android:name=".stores.StoreDetails"
             android:windowSoftInputMode="adjustPan" />
-
         <activity android:name=".stores.Stores" />
         <activity android:name=".products.AddProductDetails" />
         <activity android:name=".products.AddProduct" />
         <activity android:name=".forgot.EditPassword" />
         <activity android:name=".serviceselection.MoreOnDemand" />
-        <activity android:name=".serviceselection.ServiceSelectorActivity" />
+        <activity android:name=".serviceselection.ServiceSelectorActivity" /> <!-- launcher -->
         <activity android:name=".splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,6 +66,8 @@
             android:name=".forgot.ForgotPassword"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".help.HelpActivity" />
+        <activity android:name=".coupons.CouponDetails" />
+        <activity android:name=".home.ServiceOrderDetails" />
 
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"

@@ -79,6 +79,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="@dimen/extra_small"
                     android:layout_weight="0.35"
+                    android:id="@+id/edit"
                     android:gravity="right">
 
                     <TextView

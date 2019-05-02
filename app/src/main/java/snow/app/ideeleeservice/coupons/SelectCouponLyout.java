@@ -31,4 +31,8 @@ public class SelectCouponLyout extends AppCompatActivity {
             }
         });
     }
+
+    public void handleBannerClick(View view) {
+        startActivity(new Intent(SelectCouponLyout.this, AddCouponDetails.class));
+    }
 }

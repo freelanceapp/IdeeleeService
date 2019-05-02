@@ -124,4 +124,5 @@
     <string name="already_have_a_banner_layout">Already Have a Banner Layout</string>
     <string name="cpn_layout">Coupon Layout</string>
     <string name="select_a_package_to_start_the_service">Select a package to start the service</string>
+    <string name="order_details">Order Details</string>
 </resources>
