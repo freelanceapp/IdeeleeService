@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_margin="@dimen/margin_20dp"
+    android:padding="@dimen/margin_16dp"
+    android:background="@drawable/round_corner_ed_graystroke"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semibold"
+        android:gravity="right"
+        android:drawablePadding="@dimen/small_padding"
+        android:text="Home Cleaning"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/cross_"
+        android:fontFamily="@font/semibold"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:drawablePadding="@dimen/small_padding"
+        android:text="@string/remove"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_15sp" />
+</RelativeLayout>

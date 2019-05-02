@@ -41,7 +41,7 @@ android:layout_marginRight="@dimen/margin_4dp"
 
 
     <Button
-        android:id="@+id/ux_btn_continue_otpPage"
+        android:id="@+id/addnew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/round_corner_button"

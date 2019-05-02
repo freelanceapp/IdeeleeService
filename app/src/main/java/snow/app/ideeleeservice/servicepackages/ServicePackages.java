@@ -1,12 +1,10 @@
-package snow.app.ideeleeservice.stores;
+package snow.app.ideeleeservice.servicepackages;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,42 +12,35 @@ import java.util.ArrayList;
 
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.accepted.adapter.AcceptedJobAdapter;
-import snow.app.ideeleeservice.stores.adapter.StoreAdapter;
+import snow.app.ideeleeservice.servicepackages.adapter.ServicePackagesAdapter;
 
-public class Stores extends AppCompatActivity {
+public class ServicePackages extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<String> serviceproviderlist;
+
     ImageView backbutton1;
     ImageView notification;
     TextView title;
-    Button addnew;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stores);
+        setContentView(R.layout.activity_service_packages);
         backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
-        addnew=(Button) findViewById(R.id.addnew);
-        addnew.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Stores.this,StoreDetails.class));
-            }
-        });
         title=(TextView) findViewById(R.id.title);
-        title.setText("Stores");
+        title.setText("Packages");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView_store);
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView_servicepackage);
         serviceproviderlist = new ArrayList<>();
 
         recyclerView.setHasFixedSize(true);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(Stores.this, LinearLayoutManager.VERTICAL, false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(ServicePackages.this, LinearLayoutManager.VERTICAL, false));
 //        serviceproviderlist.add(
 //                new ActiveJobModal(
 //                        "Pending", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "Online Payment"));
@@ -64,11 +55,15 @@ public class Stores extends AppCompatActivity {
 //        //
         serviceproviderlist.add("dd");
         serviceproviderlist.add("dd");
+        serviceproviderlist.add("dd");
+        serviceproviderlist.add("dd");
+        serviceproviderlist.add("dd");
+        serviceproviderlist.add("dd");
+        serviceproviderlist.add("dd");
+        serviceproviderlist.add("dd");
 
 
-        StoreAdapter adapter = new StoreAdapter(Stores.this, serviceproviderlist);
-
-        //setting adapter to recyclerview
+        ServicePackagesAdapter adapter = new ServicePackagesAdapter(ServicePackages.this, serviceproviderlist);
         recyclerView.setAdapter(adapter);
     }
 }

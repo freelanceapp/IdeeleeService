@@ -111,4 +111,5 @@
     <string name="edit">Edit</string>
     <string name="add_product">Add Product</string>
     <string name="pd_details">Product Details</string>
+    <string name="select_a_package_to_start_the_service">Select a package to start the service</string>
 </resources>

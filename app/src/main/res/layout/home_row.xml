@@ -12,23 +12,26 @@
         android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_4dp"
+        android:layout_margin="@dimen/margin_8dp"
         android:background="@drawable/round_corner_edittext"
         android:orientation="vertical"
-        android:padding="@dimen/margin_4dp">
+       android:paddingLeft="@dimen/margin_8dp"
+        android:paddingBottom="@dimen/margin_8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
            android:layout_gravity="right"
+
+
             android:fontFamily="@font/regular"
 
             android:text="Featured"
             android:background="@color/red"
-            android:paddingRight="@dimen/margin_8dp"
-            android:paddingLeft="@dimen/margin_8dp"
+            android:paddingRight="@dimen/margin_10dp"
+            android:paddingLeft="@dimen/margin_10dp"
             android:textColor="@color/white"
-            android:textSize="@dimen/text_size_15sp"
+            android:textSize="@dimen/text_size_13sp"
             android:textStyle="bold" />
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:fontFamily="@font/regular"
+                android:fontFamily="@font/semibold"
                 android:padding="@dimen/margin_4dp"
                 android:text="@string/monthly"
                 android:textColor="@color/black"
@@ -93,12 +96,13 @@
             <TextView
                 android:id="@+id/ux_txt_ratenow"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
 android:layout_centerInParent="true"
+                android:gravity="bottom"
                 android:layout_alignParentRight="true"
 
                 android:fontFamily="@font/regular"
-                android:text="$ 150.00 Paid"
+                android:text="$150.00 Paid"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_27sp"
                 android:textStyle="bold" />

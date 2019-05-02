@@ -23,10 +23,14 @@ import com.squareup.picasso.Picasso;
 
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.forgot.EditPassword;
 import snow.app.ideeleeservice.help.HelpActivity;
 import snow.app.ideeleeservice.home.homefiles.OrderHomeFragment;
 import snow.app.ideeleeservice.products.productlist.ProductListActivity;
 import snow.app.ideeleeservice.profile.ProfileFragment;
+import snow.app.ideeleeservice.servicepackages.ServicePackages;
+import snow.app.ideeleeservice.services.Services;
+import snow.app.ideeleeservice.stores.Stores;
 
 public class HomeNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -107,7 +111,7 @@ public class HomeNavigation extends AppCompatActivity
         if (id == R.id.edit_profile) {
             setFragment(new ProfileFragment(), "Edit Profile");
         } else if (id == R.id.manageservices) {
-
+            startActivity(new Intent(HomeNavigation.this, Services.class));
         } else if (id == R.id.products) {
             startActivity(new Intent(HomeNavigation.this, ProductListActivity.class));
         } else if (id == R.id.liveorders) {
@@ -115,12 +119,15 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.servicepricing) {
 
         } else if (id == R.id.mypackage) {
+            startActivity(new Intent(HomeNavigation.this, ServicePackages.class));
         } else if (id == R.id.payments) {
         } else if (id == R.id.storeinfo) {
+            startActivity(new Intent(HomeNavigation.this, Stores.class));
         } else if (id == R.id.manageaddress) {
         } else if (id == R.id.helpsupport) {
             startActivity(new Intent(HomeNavigation.this, HelpActivity.class));
         } else if (id == R.id.editpassword) {
+            startActivity(new Intent(HomeNavigation.this, EditPassword.class));
         } else if (id == R.id.logout) {
 
         }
