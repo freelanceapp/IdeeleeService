@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ideelee+</string>
+    <string name="app_name">Ideelee Service</string>
     <string name="welcometoideelee">Welcome to ideelee+</string>
     <string name="LOGIN">LOGIN</string>
     <string name="entermobilenumber">Enter Mobile Number</string>
