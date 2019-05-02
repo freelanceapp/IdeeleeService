@@ -13,7 +13,7 @@ public class AddProductDetails extends AppCompatActivity {
     ImageView backbutton1;
     ImageView notification;
     TextView title;
-    Button btn_continue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,18 +21,13 @@ public class AddProductDetails extends AppCompatActivity {
         backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
         title=(TextView) findViewById(R.id.title);
-        title.setText("Add Product");
+        title.setText(getString(R.string.pd_details));
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        btn_continue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
     }
 }

@@ -25,6 +25,7 @@ import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.help.HelpActivity;
 import snow.app.ideeleeservice.home.homefiles.OrderHomeFragment;
+import snow.app.ideeleeservice.products.productlist.ProductListActivity;
 import snow.app.ideeleeservice.profile.ProfileFragment;
 
 public class HomeNavigation extends AppCompatActivity
@@ -108,7 +109,7 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.manageservices) {
 
         } else if (id == R.id.products) {
-
+            startActivity(new Intent(HomeNavigation.this, ProductListActivity.class));
         } else if (id == R.id.liveorders) {
 
         } else if (id == R.id.servicepricing) {

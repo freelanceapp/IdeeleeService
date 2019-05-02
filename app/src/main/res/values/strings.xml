@@ -106,4 +106,9 @@
     <string name="on_demand">On Demand Services</string>
     <string name="category_name">Category Name</string>
     <string name="note_if_any">Note (If any)</string>
+    <string name="product_list">Product List</string>
+    <string name="remove">Remove</string>
+    <string name="edit">Edit</string>
+    <string name="add_product">Add Product</string>
+    <string name="pd_details">Product Details</string>
 </resources>
