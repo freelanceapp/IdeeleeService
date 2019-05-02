@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg_blue"
+    tools:context=".stores.Stores">
+    <include layout="@layout/toolbar_child"/>
+    <TextView
+        android:id="@+id/title_bookingappointement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/regular"
+        android:gravity="left"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/select_a_service_type"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_17sp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_bg_blue"
+android:layout_marginRight="@dimen/margin_4dp"
+    android:layout_marginLeft="@dimen/margin_4dp"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_store"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:paddingRight="@dimen/margin_8dp"
+        android:paddingLeft="@dimen/margin_8dp"
+        android:background="@color/white"
+
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/ux_btn_continue_otpPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_button"
+        android:text="Add New"
+        android:layout_marginLeft="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/btn_margin"
+        android:paddingRight="@dimen/btn_margin"
+        android:textSize="@dimen/text_size_17sp" />
+</LinearLayout>
+    </LinearLayout>
+

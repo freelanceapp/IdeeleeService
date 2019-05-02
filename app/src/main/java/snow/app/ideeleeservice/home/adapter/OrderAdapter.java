@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import snow.app.ideeleeservice.home.accepted.AcceptedOrderFragment;
+import snow.app.ideeleeservice.home.completed.CompletedOrderFragment;
 import snow.app.ideeleeservice.home.progressfra.ProgressOrderFragment;
 import snow.app.ideeleeservice.home.neworder.NewOrderFragment;
 
@@ -31,7 +32,7 @@ public class OrderAdapter extends FragmentStatePagerAdapter {
                 ProgressOrderFragment tab3= new ProgressOrderFragment();
                 return tab3;
             case 3:
-                ProgressOrderFragment tab4= new ProgressOrderFragment();
+                CompletedOrderFragment tab4= new CompletedOrderFragment();
                 return tab4;
 
 

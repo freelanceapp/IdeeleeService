@@ -11,12 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".serviceselection.DelieveryService"></activity>
+        <activity android:name=".stores.StoreDetails"></activity>
+        <activity android:name=".stores.Stores" />
         <activity android:name=".products.AddProductDetails" />
+        <activity android:name=".serviceselection.DelieveryService" />
         <activity android:name=".products.AddProduct" />
         <activity android:name=".forgot.EditPassword" />
         <activity android:name=".serviceselection.MoreOnDemand" />
-                 <activity android:name=".serviceselection.ServiceSelectorActivity" />
+        <activity android:name=".serviceselection.ServiceSelectorActivity" />
         <activity android:name=".splash.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

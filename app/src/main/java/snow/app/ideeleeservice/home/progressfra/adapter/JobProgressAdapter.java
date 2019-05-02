@@ -49,6 +49,7 @@ public class JobProgressAdapter extends RecyclerView.Adapter<JobProgressAdapter.
             holder.status_value_progress.setTextColor(ContextCompat.getColor(mCtx,R.color.colorPrimary));
             holder.btn_view.setVisibility(View.GONE);
             holder.complete_progress.setVisibility(View.GONE);
+            holder.deliverto.setText("Job Location");
 
 
         }
@@ -64,7 +65,7 @@ public class JobProgressAdapter extends RecyclerView.Adapter<JobProgressAdapter.
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name,ordersummary,status_progress,txt_status_progress,status_value_progress;
+        TextView name,ordersummary,status_progress,txt_status_progress,status_value_progress,deliverto;
         Button btn_view,complete_progress;
 
         public ProductViewHolder(View itemView) {
@@ -72,10 +73,11 @@ public class JobProgressAdapter extends RecyclerView.Adapter<JobProgressAdapter.
             name=itemView.findViewById(R.id.name_progress);
             ordersummary=itemView.findViewById(R.id.ordersummary_progress);
             status_progress=itemView.findViewById(R.id.status_progress);
-            txt_status_progress=itemView.findViewById(R.id.status_value_progress);
+            txt_status_progress=itemView.findViewById(R.id.txt_status_progress);
             status_value_progress=itemView.findViewById(R.id.status_value_progress);
             btn_view=itemView.findViewById(R.id.view_progress);
             complete_progress=itemView.findViewById(R.id.complete_progress);
+            deliverto=itemView.findViewById(R.id.deliverto);
 
 
         }
