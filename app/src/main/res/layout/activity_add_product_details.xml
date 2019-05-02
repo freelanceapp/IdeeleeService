@@ -4,6 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_bg_blue"
+    android:orientation="vertical"
     tools:context=".products.AddProductDetails">
+
+    <include layout="@layout/toolbar_child" />
+
+    <TextView
+        android:id="@+id/title_bookingappointement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/regular"
+        android:gravity="left"
+        android:padding="@dimen/margin_8dp"
+        android:text="Add Product Details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_10dp"
+        android:paddingRight="@dimen/margin_10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@drawable/round_corner_ed_graystroke"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:hint="Product Title"
+            android:padding="@dimen/margin_12dp"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@drawable/round_corner_ed_graystroke"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_12dp"
+            android:text="Lunch"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@drawable/round_corner_ed_graystroke"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:hint="Price"
+            android:padding="@dimen/margin_12dp"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:background="@drawable/round_corner_ed_graystroke"
+            android:fontFamily="@font/regular"
+            android:gravity="center_vertical"
+            android:hint="Sub(Ex. Grilled Cottage Cheese + Onion..)"
+            android:padding="@dimen/margin_12dp"
+            android:textSize="@dimen/text_size_15sp" />
+
+
+        <Button
+            android:id="@+id/ux_btn_continue_addproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginRight="@dimen/btn_margin"
+            android:background="@drawable/round_corner_button"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_17sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
