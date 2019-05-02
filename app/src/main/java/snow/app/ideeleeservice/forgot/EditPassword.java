@@ -17,9 +17,9 @@ public class EditPassword extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_password);
-        backbutton1=(ImageView)findViewById(R.id.backbutton1);
+        backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
-        title=(TextView) findViewById(R.id.title_bookingappointement);
+        title=(TextView) findViewById(R.id.title);
         title.setText("Edit Password");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override

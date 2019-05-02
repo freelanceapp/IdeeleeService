@@ -18,9 +18,9 @@ public class AddProductDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product_details);
-        backbutton1=(ImageView)findViewById(R.id.backbutton1);
+        backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
-        title=(TextView) findViewById(R.id.title_bookingappointement);
+        title=(TextView) findViewById(R.id.title);
         title.setText("Add Product");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override

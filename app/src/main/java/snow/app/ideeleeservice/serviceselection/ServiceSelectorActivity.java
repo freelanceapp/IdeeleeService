@@ -57,5 +57,19 @@ public class ServiceSelectorActivity extends AppCompatActivity {
                 startActivity(new Intent(ServiceSelectorActivity.this, HomeNavigation.class));
             }
         });
+
+        more_ondemand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ServiceSelectorActivity.this, MoreOnDemand.class));
+            }
+        });
+
+        more_delivery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ServiceSelectorActivity.this, DelieveryService.class));
+            }
+        });
     }
 }

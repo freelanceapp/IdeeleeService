@@ -48,11 +48,12 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
             holder.name.setText("Pending");
             holder.name.setTextColor(ContextCompat.getColor(mCtx, R.color.orange));
             holder.txt_callnow.setText("View");
-            holder.time.setVisibility(View.GONE);
+            holder.time_accepted.setVisibility(View.GONE);
             holder.txt_callnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
             holder.txt_callnow.setGravity(Gravity.CENTER);
             holder.viewdetails.setText("Dispatched");
             holder.viewdetails.setBackground(ContextCompat.getDrawable(mCtx,R.drawable.round_corner_green_solid));
+            holder.viewdetails.setTextColor(ContextCompat.getColor(mCtx,R.color.white));
 
         }
 
@@ -66,18 +67,19 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView ordersummary, title, by, time, txt_callnow, name, viewdetails;
+        TextView ordersummary, title, by, time_accepted, txt_callnow, name, viewdetails;
 
 
         public ProductViewHolder(View itemView) {
             super(itemView);
             ordersummary = itemView.findViewById(R.id.ordersummary_accepted);
-            title = itemView.findViewById(R.id.time_accepted);
+            title = itemView.findViewById(R.id.title_accepted);
+            time_accepted = itemView.findViewById(R.id.time_accepted);
             by = itemView.findViewById(R.id.txt_by);
             name = itemView.findViewById(R.id.name);
             viewdetails = itemView.findViewById(R.id.viewdetails_accepted);
             txt_callnow = itemView.findViewById(R.id.callnow_accepted);
-            time = itemView.findViewById(R.id.time_accepted);
+
 
 
         }

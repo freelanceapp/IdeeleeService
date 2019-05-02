@@ -27,7 +27,7 @@ public class AddAddress extends AppCompatActivity implements OnMapReadyCallback 
         setContentView(R.layout.activity_add_address);
         txt_confirmlocation = findViewById(R.id.txt_confirmlocation);
         addmoredetails = findViewById(R.id.addmoredetails);
-        title_bookingappointement = findViewById(R.id.title_bookingappointement);
+        title_bookingappointement = findViewById(R.id.title);
         addmoredetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +48,7 @@ public class AddAddress extends AppCompatActivity implements OnMapReadyCallback 
                startActivity( new Intent(AddAddress.this, ServiceSelectorActivity.class));
             }
         });
- findViewById(R.id.backbutton1).setOnClickListener(new View.OnClickListener() {
+ findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();

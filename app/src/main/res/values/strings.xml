@@ -100,4 +100,9 @@
     <string name="food_delivery">Food Delivery</string>
     <string name="liquid_delivery">Liquid Delivery</string>
     <string name="gift_gallery">Gift Gallery</string>
+    <string name="request_for_a_new_category">Request for a new Category</string>
+    <string name="request_now">Request Now</string>
+    <string name="on_demand">On Demand Services</string>
+    <string name="category_name">Category Name</string>
+    <string name="note_if_any">Note (If any)</string>
 </resources>

@@ -3,6 +3,7 @@ package snow.app.ideeleeservice.serviceselection.adapter;
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +55,12 @@ public class DeliveryServiceAdapter extends RecyclerView.Adapter<DeliveryService
                     for (int i = 0; i < data.size(); i++) {
                         final CheckBox checkBox = new CheckBox(mCtx);
                         checkBox.setText(data.get(i));
+                        checkBox.setTextColor(ContextCompat.getColor(mCtx, R.color.txt_light));
+                        checkBox.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                mCtx.getResources().getDimension(R.dimen.normal_text));
+/*
                         checkBox.setButtonDrawable(ContextCompat.getDrawable(mCtx, R.drawable.checkbox_selector));
+*/
                         checkBox.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {

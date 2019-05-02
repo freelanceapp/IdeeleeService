@@ -19,9 +19,9 @@ public class HelpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
-        backbutton1=(ImageView)findViewById(R.id.backbutton1);
+        backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
-        title=(TextView) findViewById(R.id.title_bookingappointement);
+        title=(TextView) findViewById(R.id.title);
         title.setText("Help");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override

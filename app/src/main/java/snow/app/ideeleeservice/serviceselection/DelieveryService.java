@@ -1,8 +1,8 @@
 package snow.app.ideeleeservice.serviceselection;
 
 import android.app.Dialog;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -14,33 +14,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.serviceselection.adapter.DeliveryServiceAdapter;
 import snow.app.ideeleeservice.serviceselection.adapter.OnDemandAdapter;
 
-public class MoreOnDemand extends AppCompatActivity {
+public class DelieveryService extends AppCompatActivity {
     RecyclerView rv;
-    OnDemandAdapter onDemandAdapter;
-        TextView title;
-        TextView request_now;
+    DeliveryServiceAdapter onDemandAdapter;
+    TextView title;
+    TextView request_now;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_more_on_demand);
+        setContentView(R.layout.activity_delievery_service);
         rv = (RecyclerView) findViewById(R.id.rv);
         title =  findViewById(R.id.title);
         request_now =  findViewById(R.id.request_now);
-        title.setText(getString(R.string.on_demand));
+        title.setText(getString(R.string.delivery_services));
         rv.setLayoutManager(new LinearLayoutManager(this));
-        List<String> productList = new ArrayList<>();
-        productList.add("Home Cleaning");
-        productList.add("Car Repairing");
-        productList.add("Electrician");
-        productList.add("Plumber");
-        productList.add("Home Cleaning");
-        productList.add("Car Repairing");
-        productList.add("Electrician");
-        productList.add("Plumber");
+        List<String> del_list = new ArrayList<>();
+        del_list.add("Food Delivery");
+        del_list.add("Gift Delivery");
+        del_list.add("Liquid Delivery");
 
-        onDemandAdapter = new OnDemandAdapter(this, productList);
+        onDemandAdapter = new DeliveryServiceAdapter(this, del_list);
         rv.setAdapter(onDemandAdapter);
         onDemandAdapter.notifyDataSetChanged();
         findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
@@ -52,7 +48,7 @@ public class MoreOnDemand extends AppCompatActivity {
         request_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(MoreOnDemand.this);
+                final Dialog dialog = new Dialog(DelieveryService.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.request_category_pop);
                 Button submit=dialog.findViewById(R.id.submit);
