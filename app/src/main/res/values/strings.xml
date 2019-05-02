@@ -91,4 +91,13 @@
     <string name="skip">Skip</string>
     <string name="on_demand_services">On Demand Services</string>
     <string name="delivery_services">Delivery Services</string>
+    <string name="on_progress">On Progress</string>
+    <string name="completed">Completed</string>
+    <string name="enter_old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="select_a_service_type">Select a Service Type</string>
+    <string name="food_delivery">Food Delivery</string>
+    <string name="liquid_delivery">Liquid Delivery</string>
+    <string name="gift_gallery">Gift Gallery</string>
 </resources>

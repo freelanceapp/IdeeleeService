@@ -42,15 +42,17 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
         //getting the product of the specified position
 
         if (position == 0) {
-           // holder.ordersummary.setVisibility(View.VISIBLE);
-//            holder.title.setText("Jack Harry");
-//            holder.by.setText("Status:");
-//            holder.name.setText("Pending");
-//            holder.name.setTextColor(ContextCompat.getColor(mCtx, R.color.orange));
-//            holder.txt_callnow.setText("View");
-//            holder.time.setVisibility(View.GONE);
-//            holder.txt_callnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-//            holder.txt_callnow.setGravity(Gravity.CENTER);
+            holder.ordersummary.setVisibility(View.VISIBLE);
+            holder.title.setText("Jack Harry");
+            holder.by.setText("Status:");
+            holder.name.setText("Pending");
+            holder.name.setTextColor(ContextCompat.getColor(mCtx, R.color.orange));
+            holder.txt_callnow.setText("View");
+            holder.time.setVisibility(View.GONE);
+            holder.txt_callnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+            holder.txt_callnow.setGravity(Gravity.CENTER);
+            holder.viewdetails.setText("Dispatched");
+            holder.viewdetails.setBackground(ContextCompat.getDrawable(mCtx,R.drawable.round_corner_green_solid));
 
         }
 
@@ -69,13 +71,13 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-        //    ordersummary = itemView.findViewById(R.id.ordersummary);
-//            title = itemView.findViewById(R.id.title);
-//            by = itemView.findViewById(R.id.txt_by);
-//            name = itemView.findViewById(R.id.name);
-//            viewdetails = itemView.findViewById(R.id.viewdetails);
-//            txt_callnow = itemView.findViewById(R.id.callnow);
-//            time = itemView.findViewById(R.id.time);
+            ordersummary = itemView.findViewById(R.id.ordersummary_accepted);
+            title = itemView.findViewById(R.id.time_accepted);
+            by = itemView.findViewById(R.id.txt_by);
+            name = itemView.findViewById(R.id.name);
+            viewdetails = itemView.findViewById(R.id.viewdetails_accepted);
+            txt_callnow = itemView.findViewById(R.id.callnow_accepted);
+            time = itemView.findViewById(R.id.time_accepted);
 
 
         }

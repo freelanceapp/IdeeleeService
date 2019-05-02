@@ -60,23 +60,41 @@
             </LinearLayout>
         </RelativeLayout>
 
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:padding="@dimen/margin_4dp"
+android:layout_alignParentLeft="true"
+        android:id="@+id/name_progress"
+        android:text=" JACK HARRY"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:padding="@dimen/margin_4dp"
+android:layout_alignParentRight="true"
+        android:id="@+id/status_progress"
+        android:visibility="gone"
+        android:text="@string/on_progress"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_size_15sp"
+        />
+</RelativeLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/regular"
-                android:padding="@dimen/margin_4dp"
-                android:text=" JACK HARRY"
-                android:textColor="@color/black"
-                android:textSize="@dimen/text_size_15sp"
-                />
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:fontFamily="@font/regular"
-
+android:id="@+id/ordersummary_progress"
             android:padding="@dimen/margin_4dp"
             android:drawablePadding="@dimen/margin_4dp"
             android:text="American Burger X1, American Burger X2"
@@ -144,7 +162,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/txt_status_progress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -161,7 +179,7 @@
                     android:gravity="left"
                     android:fontFamily="@font/regular"
                     android:padding="@dimen/margin_4dp"
-                    android:id="@+id/status"
+                    android:id="@+id/status_value_progress"
                     android:text="Dispatched"
                     android:textColor="@color/orange"
                     android:textSize="@dimen/text_size_15sp" />
@@ -176,13 +194,14 @@
             android:id="@+id/linearlayout_button"
             android:padding="@dimen/margin_10dp">
         <Button
-            android:id="@+id/ux_btnjobdone"
+            android:id="@+id/view_progress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:fontFamily="@font/regular"
             android:background="@drawable/round_edittext_blueborder"
             android:text="View"
+
             android:layout_marginRight="@dimen/margin_10dp"
             android:textAllCaps="false"
             android:textColor="@color/colorPrimary"
@@ -191,7 +210,7 @@
 
 
             <Button
-                android:id="@+id/ux_btn2"
+                android:id="@+id/complete_progress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

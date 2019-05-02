@@ -60,23 +60,40 @@
             </LinearLayout>
         </RelativeLayout>
 
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/regular"
                 android:padding="@dimen/margin_4dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/name_completed"
                 android:text=" JACK HARRY"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_15sp"
                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:padding="@dimen/margin_4dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/status_completed"
+                android:visibility="gone"
+                android:text="@string/completed"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_size_15sp"
+                />
+        </RelativeLayout>
         <TextView
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:fontFamily="@font/regular"
-
+android:id="@+id/ordersummary_completed"
             android:padding="@dimen/margin_4dp"
             android:drawablePadding="@dimen/margin_4dp"
             android:text="American Burger X1, American Burger X2"
@@ -144,7 +161,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/txt_status_completed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -161,7 +178,7 @@
                     android:gravity="left"
                     android:fontFamily="@font/regular"
                     android:padding="@dimen/margin_4dp"
-                    android:id="@+id/status"
+                    android:id="@+id/txt_status_value_completed"
                     android:text="Completed"
                     android:textColor="@color/orange"
                     android:textSize="@dimen/text_size_15sp" />
