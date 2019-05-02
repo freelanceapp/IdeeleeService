@@ -9,8 +9,7 @@
     tools:context=".stores.Stores">
     <include layout="@layout/toolbar_child"/>
     <TextView
-        android:id="@+id/title_bookingappointement"
-        android:layout_width="match_parent"
+         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:fontFamily="@font/regular"

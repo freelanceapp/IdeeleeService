@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg_blue"
+    android:orientation="vertical"
+    tools:context=".coupons.AddCustomCoupon">
+
+    <include layout="@layout/toolbar_child" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/med_padding">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="@dimen/med_padding"
+                android:src="@drawable/banner_coupon" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_ed_graystroke"
+                android:hint="Price"
+                android:inputType="number"
+                android:padding="@dimen/small_padding" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/med_padding"
+                android:background="@drawable/round_corner_ed_graystroke"
+                android:minLines="5"
+                android:fontFamily="@font/regular"
+                android:gravity="top"
+                android:hint="@string/terms_condition_"/>
+
+            <Button
+                android:id="@+id/ux_btn_continue_loginPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_24dp"
+                android:background="@drawable/round_corner_button"
+                android:text="Add Coupon"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginRight="@dimen/big_margin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_17sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

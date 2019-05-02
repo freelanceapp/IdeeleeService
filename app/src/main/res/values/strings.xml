@@ -111,5 +111,17 @@
     <string name="edit">Edit</string>
     <string name="add_product">Add Product</string>
     <string name="pd_details">Product Details</string>
+    <string name="per_hour">(Per Hour)</string>
+    <string name="add_pricing_for_service">Add pricing for service</string>
+    <string name="add">Add</string>
+    <string name="service_pricing">Service Pricing</string>
+    <string name="add_coupons">Add Coupons</string>
+    <string name="add_coupon">Add Coupon</string>
+    <string name="buy_a_voucher_get_upto"><![CDATA[Buy a voucher & get upto]]></string>
+    <string name="terms_condition_"><![CDATA[Terms & Condition]]></string>
+    <string name="add_cpn">Add Coupon</string>
+    <string name="proceed_now">Proceed Now</string>
+    <string name="already_have_a_banner_layout">Already Have a Banner Layout</string>
+    <string name="cpn_layout">Coupon Layout</string>
     <string name="select_a_package_to_start_the_service">Select a package to start the service</string>
 </resources>

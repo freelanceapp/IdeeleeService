@@ -15,10 +15,17 @@
         <activity android:name=".services.Services" />
         <activity android:name=".servicepackages.ServicePackages" />
         <activity android:name=".products.productlist.ProductListActivity" />
+        <activity android:name=".coupons.SelectCouponLyout"></activity>
+        <activity android:name=".coupons.AddCustomCoupon"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".coupons.CouponsListing"></activity>
+        <activity android:name=".servicepricing.ServicePricingActivity" />
+
         <activity android:name=".serviceselection.DelieveryService" />
         <activity
             android:name=".stores.StoreDetails"
             android:windowSoftInputMode="adjustPan" />
+
         <activity android:name=".stores.Stores" />
         <activity android:name=".products.AddProductDetails" />
         <activity android:name=".products.AddProduct" />

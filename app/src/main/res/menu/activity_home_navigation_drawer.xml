@@ -43,6 +43,10 @@
             android:icon="@drawable/address"
             android:title="Manage Address" />
         <item
+            android:id="@+id/add_coupons"
+            android:icon="@drawable/help"
+            android:title="@string/add_coupons" />
+        <item
             android:id="@+id/helpsupport"
             android:icon="@drawable/help"
             android:title="@string/help_supports" />

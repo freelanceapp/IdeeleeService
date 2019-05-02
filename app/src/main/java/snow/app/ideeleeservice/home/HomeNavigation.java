@@ -23,11 +23,14 @@ import com.squareup.picasso.Picasso;
 
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.coupons.CouponsListing;
 import snow.app.ideeleeservice.forgot.EditPassword;
 import snow.app.ideeleeservice.help.HelpActivity;
 import snow.app.ideeleeservice.home.homefiles.OrderHomeFragment;
 import snow.app.ideeleeservice.products.productlist.ProductListActivity;
 import snow.app.ideeleeservice.profile.ProfileFragment;
+import snow.app.ideeleeservice.servicepricing.ServicePricingActivity;
+import snow.app.ideeleeservice.splash.Splash;
 import snow.app.ideeleeservice.servicepackages.ServicePackages;
 import snow.app.ideeleeservice.services.Services;
 import snow.app.ideeleeservice.stores.Stores;
@@ -41,7 +44,7 @@ public class HomeNavigation extends AppCompatActivity
         setContentView(R.layout.activity_home_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.inflateMenu(R.menu.home_navigation);
-            setFragment(new OrderHomeFragment(),"Home");
+        setFragment(new OrderHomeFragment(), "Home");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -52,9 +55,9 @@ public class HomeNavigation extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View v=navigationView.getHeaderView(0);
-        ImageView img=v.findViewById(R.id.img);
-        WindowManager wm = (WindowManager)getSystemService(WINDOW_SERVICE);
+        View v = navigationView.getHeaderView(0);
+        ImageView img = v.findViewById(R.id.img);
+        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
         final DisplayMetrics displayMetrics = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
@@ -117,7 +120,7 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.liveorders) {
 
         } else if (id == R.id.servicepricing) {
-
+            startActivity(new Intent(HomeNavigation.this, ServicePricingActivity.class));
         } else if (id == R.id.mypackage) {
             startActivity(new Intent(HomeNavigation.this, ServicePackages.class));
         } else if (id == R.id.payments) {
@@ -129,7 +132,9 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.editpassword) {
             startActivity(new Intent(HomeNavigation.this, EditPassword.class));
         } else if (id == R.id.logout) {
-
+            startActivity(new Intent(HomeNavigation.this, Splash.class));
+        } else if (id == R.id.add_coupons) {
+            startActivity(new Intent(HomeNavigation.this, CouponsListing.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -137,9 +142,9 @@ public class HomeNavigation extends AppCompatActivity
         return true;
     }
 
-        // public method to replace fragment on home screen
+    // public method to replace fragment on home screen
     public void setFragment(Fragment fragment, String title) {
-        TextView tv=findViewById(R.id.title);
+        TextView tv = findViewById(R.id.title);
         tv.setText(title);
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction()

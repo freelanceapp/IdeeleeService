@@ -2,6 +2,8 @@ package snow.app.ideeleeservice.products;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,6 +22,7 @@ public class AddProductDetails extends AppCompatActivity {
         setContentView(R.layout.activity_add_product_details);
         backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
+
         title=(TextView) findViewById(R.id.title);
         title.setText(getString(R.string.pd_details));
         backbutton1.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +31,8 @@ public class AddProductDetails extends AppCompatActivity {
                 onBackPressed();
             }
         });
+
+
 
     }
 }

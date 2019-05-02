@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:layout_marginBottom="@dimen/extra_small"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:paddingTop="@dimen/med_padding"
+            android:paddingBottom="@dimen/med_padding"
+            android:paddingLeft="@dimen/small_padding"
+            android:paddingRight="@dimen/small_padding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+             android:weightSum="2">
+
+            <TextView
+                android:id="@+id/service_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/txt_light"
+                android:textSize="@dimen/normal_text"
+                android:text="Car Repairing"
+                android:padding="@dimen/small_padding"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/add_btn"
+                    android:visibility="gone"
+                    android:background="@drawable/round_corner_colorprimary"
+                    android:text="@string/add"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/btn_margin"
+                    android:paddingRight="@dimen/btn_margin"
+                    android:paddingTop="@dimen/small_padding"
+                    android:paddingBottom="@dimen/small_padding"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/edit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/normal_text"
+                    android:text="$15.00 Per Hour"
+                    android:padding="@dimen/small_padding"
+                    android:drawableRight="@drawable/edit_"
+                    android:drawablePadding="@dimen/small_padding"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center_vertical|right"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
