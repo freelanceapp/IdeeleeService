@@ -142,7 +142,6 @@ public class HomeNavigation extends AppCompatActivity
         return true;
     }
 
-    // public method to replace fragment on home screen
     public void setFragment(Fragment fragment, String title) {
         TextView tv = findViewById(R.id.title);
         tv.setText(title);
