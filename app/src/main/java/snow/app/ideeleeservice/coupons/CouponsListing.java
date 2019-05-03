@@ -36,7 +36,7 @@ public class CouponsListing extends AppCompatActivity {
         title = findViewById(R.id.title);
         add_product = findViewById(R.id.add_product);
         recyclerView = findViewById(R.id.recyclerView);
-        title.setText(getString(R.string.product_list));
+        title.setText(getString(R.string.add_coupon));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         add_product.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -126,4 +126,6 @@
     <string name="select_a_package_to_start_the_service">Select a package to start the service</string>
     <string name="order_details">Order Details</string>
     <string name="update_password">Update Password</string>
+    <string name="add_your_stores">Add Your Stores</string>
+    <string name="main_text">Main Text (upto 50 words)</string>
 </resources>
