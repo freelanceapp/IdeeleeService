@@ -1,4 +1,4 @@
-package snow.app.ideeleeservice.services;
+package snow.app.ideeleeservice.payments;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -10,28 +10,28 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import snow.app.ideeleeservice.R;
-import snow.app.ideeleeservice.home.adapter.OrderAdapter;
+import snow.app.ideeleeservice.payments.adapter.PaymentsAdapter;
 import snow.app.ideeleeservice.services.adapter.ManageServicesAdapter;
 
-public class Services extends AppCompatActivity {
-    ManageServicesAdapter adapter;
+public class Payments extends AppCompatActivity {
+    PaymentsAdapter adapter;
     ViewPager viewPager;
-TabLayout tabLayout;
+
     ImageView backbutton1;
     ImageView notification;
     TextView title;
+    TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_services);
-
+        setContentView(R.layout.activity_payments);
          tabLayout = (TabLayout)findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("On Demand Services"));
-        tabLayout.addTab(tabLayout.newTab().setText("Delivery Services"));
+        tabLayout.addTab(tabLayout.newTab().setText("Received"));
+        tabLayout.addTab(tabLayout.newTab().setText("Withdrawl"));
         backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
         title=(TextView) findViewById(R.id.title);
-        title.setText("Manage Services");
+        title.setText("Payments");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +42,7 @@ TabLayout tabLayout;
 
 
         viewPager = (ViewPager)findViewById(R.id.pager);
-        adapter = new ManageServicesAdapter
+        adapter = new PaymentsAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -63,19 +63,21 @@ TabLayout tabLayout;
             }
         });
         tabLayout.setupWithViewPager(viewPager);
-
         setupTabIcons();
     }
     private void setupTabIcons() {
 
-        TextView tabOne = (TextView) LayoutInflater.from(Services.this).inflate(R.layout.tab_tv, null);
-        tabOne.setText("On Demand Services");
+        TextView tabOne = (TextView) LayoutInflater.from(Payments.this).inflate(R.layout.tab_tv, null);
+        tabOne.setText("Received");
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
-        TextView tabTwo = (TextView) LayoutInflater.from(Services.this).inflate(R.layout.tab_tv, null);
-        tabTwo.setText("Delivery Services");
+        TextView tabTwo = (TextView) LayoutInflater.from(Payments.this).inflate(R.layout.tab_tv, null);
+        tabTwo.setText("Withdrawl");
+        tabLayout.getTabAt(1).setCustomView(tabOne);
 
-        tabLayout.getTabAt(1).setCustomView(tabTwo);
+
+
 
     }
+
 }

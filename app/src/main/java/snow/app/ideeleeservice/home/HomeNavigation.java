@@ -27,6 +27,7 @@ import snow.app.ideeleeservice.coupons.CouponsListing;
 import snow.app.ideeleeservice.forgot.EditPassword;
 import snow.app.ideeleeservice.help.HelpActivity;
 import snow.app.ideeleeservice.home.homefiles.OrderHomeFragment;
+import snow.app.ideeleeservice.payments.Payments;
 import snow.app.ideeleeservice.products.productlist.ProductListActivity;
 import snow.app.ideeleeservice.profile.ProfileFragment;
 import snow.app.ideeleeservice.servicepricing.ServicePricingActivity;
@@ -124,6 +125,8 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.mypackage) {
             startActivity(new Intent(HomeNavigation.this, ServicePackages.class));
         } else if (id == R.id.payments) {
+            startActivity(new Intent(HomeNavigation.this, Payments.class));
+
         } else if (id == R.id.storeinfo) {
             startActivity(new Intent(HomeNavigation.this, Stores.class));
         } else if (id == R.id.manageaddress) {

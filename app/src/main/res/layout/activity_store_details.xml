@@ -146,13 +146,13 @@
                 android:layout_height="120dp" />
         </RelativeLayout>
         <Button
-            android:id="@+id/ux_btn_continue_otpPage"
+            android:id="@+id/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_corner_button"
             android:text="Add"
             android:layout_gravity="center"
-            android:layout_marginLeft="@dimen/margin_10dp"
+
             android:layout_marginTop="@dimen/margin_20dp"
             android:textAllCaps="false"
             android:layout_marginBottom="@dimen/margin_20dp"

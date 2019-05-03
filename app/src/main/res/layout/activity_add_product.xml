@@ -32,7 +32,7 @@
         android:background="@drawable/square_border_whitebg"
         android:padding="@dimen/margin_8dp"
         android:text="@string/food_delivery"
-        android:textSize="20dp" />
+        android:textSize="@dimen/text_size_15sp" />
 
     <RadioButton
         android:id="@+id/radioButton2"
@@ -44,7 +44,7 @@
         android:padding="@dimen/margin_8dp"
         android:text="@string/gift_gallery"
 
-        android:textSize="20dp" />
+        android:textSize="@dimen/text_size_15sp" />
 
     <RadioButton
         android:id="@+id/radioButton3"
@@ -55,7 +55,7 @@
         android:background="@drawable/square_border_whitebg"
         android:padding="@dimen/margin_8dp"
         android:text="@string/liquid_delivery"
-        android:textSize="20dp" />
+        android:textSize="@dimen/text_size_15sp" />
 
     <RadioButton
         android:id="@+id/radioButton4"
@@ -67,7 +67,7 @@
         android:padding="@dimen/margin_8dp"
         android:text="@string/food_delivery"
 
-        android:textSize="20dp" />
+        android:textSize="@dimen/text_size_15sp" />
 
     <RadioButton
         android:id="@+id/radioButton5"
@@ -79,7 +79,7 @@
         android:padding="@dimen/margin_8dp"
         android:text="@string/liquid_delivery"
 
-        android:textSize="20dp" />
+        android:textSize="@dimen/text_size_15sp" />
 
     <RadioButton
         android:id="@+id/radioButton6"
@@ -90,7 +90,7 @@
         android:background="@drawable/square_border_whitebg"
         android:padding="@dimen/margin_8dp"
         android:text="@string/gift_gallery"
-        android:textSize="20dp" />
+        android:textSize="@dimen/text_size_15sp" />
 
     <Button
         android:id="@+id/continue_addproduct"

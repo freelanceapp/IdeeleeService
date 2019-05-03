@@ -3,8 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="horizontal"
-    android:layout_margin="@dimen/margin_20dp"
+android:layout_marginTop="@dimen/margin_10dp"
     android:padding="@dimen/margin_16dp"
+    android:layout_marginRight="@dimen/margin_8dp"
+    android:layout_marginLeft="@dimen/margin_8dp"
     android:background="@drawable/round_corner_ed_graystroke"
     android:layout_height="wrap_content">
     <TextView
