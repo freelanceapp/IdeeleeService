@@ -119,7 +119,7 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.products) {
             startActivity(new Intent(HomeNavigation.this, ProductListActivity.class));
         } else if (id == R.id.liveorders) {
-
+            setFragment(new OrderHomeFragment(), "Home");
         } else if (id == R.id.servicepricing) {
             startActivity(new Intent(HomeNavigation.this, ServicePricingActivity.class));
         } else if (id == R.id.mypackage) {
