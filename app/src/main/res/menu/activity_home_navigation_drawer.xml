@@ -44,7 +44,7 @@
             android:title="Manage Address" />
         <item
             android:id="@+id/add_coupons"
-            android:icon="@drawable/help"
+            android:icon="@drawable/coupon_"
             android:title="@string/add_coupons" />
         <item
             android:id="@+id/helpsupport"
