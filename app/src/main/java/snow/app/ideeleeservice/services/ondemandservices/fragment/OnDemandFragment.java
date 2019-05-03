@@ -1,7 +1,5 @@
 package snow.app.ideeleeservice.services.ondemandservices.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,7 +12,6 @@ import java.util.ArrayList;
 
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.services.deliveryservices.adapter.DeliveryFragmentAdapter;
-import snow.app.ideeleeservice.services.ondemandservices.adapter.OnDemandAdapter;
 
 
 public class OnDemandFragment extends Fragment {

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".services.Services">
     <include layout="@layout/toolbar_child"/>
@@ -15,9 +16,8 @@
         android:background="@color/white"
         android:elevation="6dp"
         app:tabTextColor="@color/black"
-        app:tabMode="scrollable"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+        app:tabMode="fixed"
+        android:minHeight="?attr/actionBarSize"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"

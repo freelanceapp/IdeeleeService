@@ -1,7 +1,5 @@
 package snow.app.ideeleeservice.services.deliveryservices.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,9 +11,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import snow.app.ideeleeservice.R;
-import snow.app.ideeleeservice.home.accepted.adapter.AcceptedJobAdapter;
-import snow.app.ideeleeservice.services.deliveryservices.adapter.DeliveryFragmentAdapter;
-import snow.app.ideeleeservice.services.ondemandservices.adapter.OnDemandAdapter;
+import snow.app.ideeleeservice.services.ondemandservices.adapter.OnDemandAdapterServ;
 
 public class DeliveryFragment extends Fragment {
     RecyclerView recyclerView;
@@ -30,24 +26,13 @@ public class DeliveryFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-//        serviceproviderlist.add(
-//                new ActiveJobModal(
-//                        "Pending", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "Online Payment"));
-//
-//        serviceproviderlist.add(
-//                new ActiveJobModal(
-//                        "Accept", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "cash on delivery"));
-//
-//        serviceproviderlist.add(
-//                new ActiveJobModal(
-//                        "On Going", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "Online payment"));
-//        //
-        serviceproviderlist.add("Food Delivery");
+
+         serviceproviderlist.add("Food Delivery");
         serviceproviderlist.add("Gift Delivery");
         serviceproviderlist.add("Liquid Delivery");
 
 
-        OnDemandAdapter adapter = new OnDemandAdapter(getActivity(), serviceproviderlist);
+        OnDemandAdapterServ adapter = new OnDemandAdapterServ(getActivity(), serviceproviderlist);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);

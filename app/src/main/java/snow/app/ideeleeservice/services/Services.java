@@ -4,6 +4,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -70,11 +71,15 @@ TabLayout tabLayout;
 
         TextView tabOne = (TextView) LayoutInflater.from(Services.this).inflate(R.layout.tab_tv, null);
         tabOne.setText("On Demand Services");
+        tabOne.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                getResources().getDimension(R.dimen.text_size_13sp));
         tabLayout.getTabAt(0).setCustomView(tabOne);
+
 
         TextView tabTwo = (TextView) LayoutInflater.from(Services.this).inflate(R.layout.tab_tv, null);
         tabTwo.setText("Delivery Services");
-
+        tabTwo.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                getResources().getDimension(R.dimen.text_size_13sp));
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
     }

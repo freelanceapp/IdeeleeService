@@ -8,7 +8,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,7 +18,7 @@ import java.util.List;
 import snow.app.ideeleeservice.R;
 
 
-public class OnDemandAdapter extends RecyclerView.Adapter<OnDemandAdapter.ProductViewHolder> {
+public class OnDemandAdapterServ extends RecyclerView.Adapter<OnDemandAdapterServ.ProductViewHolder> {
 
 
     //this context we will use to inflate the layout
@@ -29,7 +28,7 @@ public class OnDemandAdapter extends RecyclerView.Adapter<OnDemandAdapter.Produc
     private List<String> productList;
 
     //getting the context and product list with constructor
-    public OnDemandAdapter(Context mCtx, List<String> productList) {
+    public OnDemandAdapterServ(Context mCtx, List<String> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
     }

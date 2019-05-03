@@ -62,22 +62,20 @@ public class Payments extends AppCompatActivity {
 
             }
         });
-        tabLayout.setupWithViewPager(viewPager);
-        setupTabIcons();
+       // tabLayout.setupWithViewPager(viewPager);
+       // setupTabIcons();
     }
     private void setupTabIcons() {
 
         TextView tabOne = (TextView) LayoutInflater.from(Payments.this).inflate(R.layout.tab_tv, null);
         tabOne.setText("Received");
         tabLayout.getTabAt(0).setCustomView(tabOne);
-
         TextView tabTwo = (TextView) LayoutInflater.from(Payments.this).inflate(R.layout.tab_tv, null);
         tabTwo.setText("Withdrawl");
-        tabLayout.getTabAt(1).setCustomView(tabOne);
+        tabLayout.getTabAt(1).setCustomView(tabTwo);
 
 
 
 
     }
-
 }

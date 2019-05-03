@@ -1,7 +1,5 @@
 package snow.app.ideeleeservice.payments.received.fragment;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,7 +12,6 @@ import java.util.ArrayList;
 
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.payments.received.adapter.ReceivedFragmentAdapter;
-import snow.app.ideeleeservice.services.ondemandservices.adapter.OnDemandAdapter;
 
 public class ReceivedFragment extends Fragment {
     RecyclerView recyclerView;
@@ -31,18 +28,7 @@ public class ReceivedFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-//        serviceproviderlist.add(
-//                new ActiveJobModal(
-//                        "Pending", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "Online Payment"));
-//
-//        serviceproviderlist.add(
-//                new ActiveJobModal(
-//                        "Accept", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "cash on delivery"));
-//
-//        serviceproviderlist.add(
-//                new ActiveJobModal(
-//                        "On Going", "APR 18,2019 02:00PM", "JACK HARRY", "", "", "", "Online payment"));
-//        //
+
         serviceproviderlist.add("sd");
         serviceproviderlist.add("sadas");
         serviceproviderlist.add("sadsd");

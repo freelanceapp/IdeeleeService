@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
-android:layout_marginTop="@dimen/margin_10dp"
-    android:padding="@dimen/margin_16dp"
-    android:layout_marginRight="@dimen/margin_8dp"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="@dimen/margin_8dp"
-    android:background="@drawable/round_corner_ed_graystroke"
-    android:layout_height="wrap_content">
+     android:layout_marginRight="@dimen/margin_8dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/small_padding">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/small_padding"
         android:fontFamily="@font/semibold"
         android:gravity="right"
-        android:drawablePadding="@dimen/small_padding"
         android:text="Home Cleaning"
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_15sp" />
@@ -22,11 +20,11 @@ android:layout_marginTop="@dimen/margin_10dp"
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:drawableLeft="@drawable/cross_"
+        android:drawablePadding="@dimen/small_padding"
         android:fontFamily="@font/semibold"
         android:gravity="right"
-        android:layout_alignParentRight="true"
-        android:drawablePadding="@dimen/small_padding"
         android:text="@string/remove"
         android:textColor="@color/red"
         android:textSize="@dimen/text_size_15sp" />
