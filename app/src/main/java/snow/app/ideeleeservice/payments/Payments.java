@@ -62,8 +62,8 @@ public class Payments extends AppCompatActivity {
 
             }
         });
-       // tabLayout.setupWithViewPager(viewPager);
-       // setupTabIcons();
+      //  tabLayout.setupWithViewPager(viewPager);
+      //  setupTabIcons();
     }
     private void setupTabIcons() {
 
@@ -78,4 +78,5 @@ public class Payments extends AppCompatActivity {
 
 
     }
+
 }

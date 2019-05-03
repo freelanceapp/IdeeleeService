@@ -57,9 +57,9 @@ public class OrderHomeFragment extends Fragment {
             }
         });
 
-        tabLayout.setupWithViewPager(viewPager);
+       // tabLayout.setupWithViewPager(viewPager);
 
-        setupTabIcons();
+      //  setupTabIcons();
 
         return v;
     }

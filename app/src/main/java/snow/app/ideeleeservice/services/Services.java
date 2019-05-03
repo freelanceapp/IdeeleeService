@@ -1,6 +1,7 @@
 package snow.app.ideeleeservice.services;
 
 import android.support.design.widget.TabLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,6 +30,7 @@ TabLayout tabLayout;
          tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("On Demand Services"));
         tabLayout.addTab(tabLayout.newTab().setText("Delivery Services"));
+
         backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
         title=(TextView) findViewById(R.id.title);
@@ -51,11 +53,10 @@ TabLayout tabLayout;
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
-            }
 
+            }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
 
             @Override
@@ -63,9 +64,9 @@ TabLayout tabLayout;
 
             }
         });
-        tabLayout.setupWithViewPager(viewPager);
+       // tabLayout.setupWithViewPager(viewPager);
 
-        setupTabIcons();
+       // setupTabIcons();
     }
     private void setupTabIcons() {
 
@@ -81,6 +82,7 @@ TabLayout tabLayout;
         tabTwo.setTextSize(TypedValue.COMPLEX_UNIT_PX,
                 getResources().getDimension(R.dimen.text_size_13sp));
         tabLayout.getTabAt(1).setCustomView(tabTwo);
+
 
     }
 }

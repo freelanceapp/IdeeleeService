@@ -13,8 +13,9 @@
         android:background="@color/white"
         app:tabTextColor="@color/black"
         android:elevation="6dp"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab"
+        app:tabSelectedTextColor="@color/colorPrimary"
         app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/colorPrimaryDark"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
