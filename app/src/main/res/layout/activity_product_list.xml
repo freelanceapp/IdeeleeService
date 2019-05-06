@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_24dp"
         android:background="@drawable/round_corner_button"
-        android:text="Add New"
+        android:text="@string/add_new"
         android:textAllCaps="false"
         android:drawableLeft="@drawable/add_p"
         android:drawableTint="@color/white"

@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".9"
                     android:fontFamily="@font/semibold"
-                    android:text="Chicago-style Pizza"
+                    android:text="@string/chicago_style_pizza"
                     android:textColor="@color/black"
                     android:textSize="@dimen/normal_text" />
 

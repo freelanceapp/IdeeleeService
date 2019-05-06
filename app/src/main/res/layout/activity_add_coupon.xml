@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round_corner_ed_graystroke"
-                android:hint="Price"
+                android:hint="@string/price"
                 android:inputType="number"
                 android:padding="@dimen/small_padding" />
 
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_24dp"
                 android:background="@drawable/round_corner_button"
-                android:text="Add Coupon"
+                android:text="@string/add_coupon"
                 android:textAllCaps="false"
                 android:layout_marginLeft="@dimen/big_margin"
                 android:layout_marginRight="@dimen/big_margin"

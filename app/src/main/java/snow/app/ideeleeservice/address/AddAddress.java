@@ -3,7 +3,11 @@ package snow.app.ideeleeservice.address;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -20,7 +24,9 @@ public class AddAddress extends AppCompatActivity implements OnMapReadyCallback 
     TextView addmoredetails;
     TextView txt_confirmlocation;
     TextView title_bookingappointement;
-
+WindowManager wm;
+int height;
+DisplayMetrics displayMetrics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,11 +60,22 @@ public class AddAddress extends AppCompatActivity implements OnMapReadyCallback 
                 finish();
             }
         });
+         wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+          displayMetrics = new DisplayMetrics();
+        wm.getDefaultDisplay().getMetrics(displayMetrics);
+         height = displayMetrics.heightPixels;
+        System.out.println("height of screen---"+height);
+        int width = displayMetrics.widthPixels;
         title_bookingappointement.setText("Add Address");
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+        ViewGroup.LayoutParams params = mapFragment.getView().getLayoutParams();
+        params.height = height/2;
+        mapFragment.getView().setLayoutParams(params);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {

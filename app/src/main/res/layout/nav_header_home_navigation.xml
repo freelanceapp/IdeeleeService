@@ -28,7 +28,7 @@
         android:layout_gravity="center"
         android:fontFamily="@font/regular"
         android:gravity="center"
-        android:text="Jessica Ruby"
+        android:text="@string/jessica_ruby"
         android:textColor="@color/black"
         android:textSize="@dimen/normal_text" />
 

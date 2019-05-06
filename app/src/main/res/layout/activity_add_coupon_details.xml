@@ -75,7 +75,7 @@
                     android:fontFamily="@font/semibold"
                     android:gravity="center"
                     android:padding="@dimen/small_padding"
-                    android:text="Off"
+                    android:text="@string/off"
                     android:textColor="@color/black"
                     android:textSize="@dimen/normal_text" />
 
@@ -90,7 +90,7 @@
                 android:drawableTint="@color/gray"
                 android:gravity="center_vertical"
                 android:padding="@dimen/small_padding"
-                android:text="Valid Till" />
+                android:text="@string/valid_till" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                 android:layout_marginRight="@dimen/big_margin"
                 android:layout_marginBottom="@dimen/small_padding"
                 android:background="@drawable/round_corner_button"
-                android:text="Add Coupon"
+                android:text="@string/add_coupon"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_17sp" />

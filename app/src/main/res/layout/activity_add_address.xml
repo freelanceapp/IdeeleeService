@@ -18,7 +18,7 @@
         android:drawablePadding="@dimen/margin_8dp"
         android:fontFamily="@font/regular"
         android:padding="@dimen/med_padding"
-        android:text="Auto detect my location"
+        android:text="@string/auto_detect_my_location"
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_15sp" />
 
@@ -35,7 +35,7 @@
                 android:id="@+id/map"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center" />
 
             <LinearLayout
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/regular"
-                    android:text="Location"
+                    android:text="@string/location"
                     android:textSize="@dimen/text_size_15sp" />
 
                 <EditText
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/grey_divider"
                     android:fontFamily="@font/regular"
-                    android:hint="Address"
+                    android:hint="@string/address"
                     android:padding="@dimen/small_padding"
                     android:textColor="@color/black"
                     android:textSize="@dimen/normal_text" />
@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/grey_divider"
                         android:fontFamily="@font/regular"
-                        android:hint="Flat/House Number"
+                        android:hint="@string/flat_house_number"
                         android:padding="@dimen/small_padding"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
@@ -96,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/grey_divider"
                         android:fontFamily="@font/regular"
-                        android:hint="Landmark"
+                        android:hint="@string/landmark"
                         android:padding="@dimen/small_padding"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
@@ -129,7 +129,7 @@
                             android:paddingLeft="@dimen/margin_8dp"
                             android:paddingTop="@dimen/margin_10dp"
                             android:paddingBottom="@dimen/margin_10dp"
-                            android:text="Add More Details"
+                            android:text="@string/add_more_details"
                             android:textAllCaps="false"
                             android:textColor="@color/colorPrimary"
                             android:textSize="@dimen/text_size_13sp" />
@@ -145,7 +145,7 @@
                             android:gravity="center"
                             android:paddingTop="@dimen/margin_10dp"
                             android:paddingBottom="@dimen/margin_10dp"
-                            android:text="Confirm Location"
+                            android:text="@string/confirm_location"
                             android:textAllCaps="false"
                             android:textColor="@color/white"
                             android:textSize="@dimen/text_size_13sp" />
@@ -157,7 +157,7 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/regular"
                         android:paddingLeft="@dimen/med_padding"
-                        android:text="for more accuracy"
+                        android:text="@string/for_more_accuracy"
                         android:textSize="@dimen/text_size_15sp" />
                 </LinearLayout>
 
@@ -174,7 +174,7 @@
                     android:gravity="center"
                     android:paddingTop="@dimen/margin_10dp"
                     android:paddingBottom="@dimen/margin_10dp"
-                    android:text="Confirm Location"
+                    android:text="@string/confirm_location"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_13sp"

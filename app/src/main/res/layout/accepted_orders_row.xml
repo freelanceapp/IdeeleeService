@@ -43,7 +43,7 @@
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Payment:"
+                    android:text="@string/payment"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_13sp" />
 
@@ -112,7 +112,7 @@
             android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
             android:padding="@dimen/margin_4dp"
             android:drawablePadding="@dimen/small_padding"
-            android:text="Job Location"
+            android:text="@string/job_location"
             android:textSize="@dimen/text_size_15sp" />
         <TextView
             android:layout_marginLeft="@dimen/margin_20dp"
@@ -147,7 +147,7 @@
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Order ID :"
+                    android:text="@string/order_id"
                     android:fontFamily="@font/regular"
 
                     android:textSize="@dimen/text_size_15sp" />
@@ -173,7 +173,7 @@
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="By:"
+                    android:text="@string/by"
                     android:fontFamily="@font/regular"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_15sp" />
@@ -212,7 +212,7 @@
                 android:paddingLeft="@dimen/margin_4dp"
                 android:drawablePadding="@dimen/margin_10dp"
                 android:background="@drawable/round_edittext_blueborder"
-                android:text="Call Now"
+                android:text="@string/call_now"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"
@@ -228,7 +228,7 @@
                 android:padding="@dimen/margin_8dp"
                 android:fontFamily="@font/regular"
                 android:background="@drawable/black_round_stroke"
-                android:text="View Details"
+                android:text="@string/view_details"
                 android:layout_marginRight="@dimen/margin_10dp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"

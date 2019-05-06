@@ -23,7 +23,7 @@
             android:gravity="center"
             android:padding="@dimen/margin_4dp"
             android:fontFamily="@font/regular"
-            android:text="Plumber"
+            android:text="@string/plumber"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_17sp" />
 

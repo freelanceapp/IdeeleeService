@@ -24,7 +24,7 @@
                 android:layout_gravity="center"
                 android:textSize="@dimen/normal_text"
                 android:textColor="@color/white"
-                android:text="Home"
+                android:text="@string/home"
                 android:fontFamily="@font/semibold"/>
         </android.support.v7.widget.Toolbar>
 

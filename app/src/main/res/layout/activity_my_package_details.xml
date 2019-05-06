@@ -42,7 +42,7 @@
             android:buttonTint="@color/orange"
             android:checked="true"
             android:clickable="false"
-            android:text="2 On Demand Services"
+            android:text="@string/_2_on_demand_services"
             android:textColor="@color/txt_light"
             android:textSize="@dimen/text_size_13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
             android:buttonTint="@color/orange"
             android:checked="true"
             android:clickable="false"
-            android:text="1 Delivery Service"
+            android:text="@string/_1_delivery_service"
             android:textColor="@color/txt_light"
             android:textSize="@dimen/text_size_13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,7 @@
             android:layout_marginTop="@dimen/margin_20dp"
             android:fontFamily="@font/regular"
             android:padding="@dimen/margin_4dp"
-            android:text="Valid Till 25 May 2019"
+            android:text="@string/valid_till_25_may_2019"
             android:textColor="@color/orange"
             android:textSize="@dimen/text_size_19sp" />
 
@@ -98,7 +98,7 @@
             android:background="@drawable/round_edittext_blueborder"
             android:paddingLeft="@dimen/btn_margin"
             android:paddingRight="@dimen/btn_margin"
-            android:text="Update Package"
+            android:text="@string/update_package"
 
             android:textAllCaps="false"
             android:textSize="@dimen/text_size_19sp" />

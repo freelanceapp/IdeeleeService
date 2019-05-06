@@ -13,7 +13,7 @@
         android:padding="@dimen/med_padding"
         android:textColor="@color/black"
         android:fontFamily="@font/semibold"
-        android:text="Car Repairing" />
+        android:text="@string/car_repairing" />
 
     <EditText
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
          android:padding="@dimen/med_padding"
         android:textColor="@color/txt_light"
         android:fontFamily="@font/semibold"
-        android:text="Per Hour" />
+        android:text="@string/per_hour" />
     <Button
         android:id="@+id/submit"
         android:layout_width="match_parent"

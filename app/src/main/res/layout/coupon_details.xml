@@ -82,7 +82,7 @@
             android:fontFamily="@font/semibold"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:text="Edit"
+            android:text="@string/edit"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_19sp" />
 
@@ -91,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:text="Remove"
+            android:text="@string/remove"
             android:layout_margin="@dimen/small_padding"
             android:layout_marginBottom="@dimen/margin_20dp"
             android:layout_weight="1"

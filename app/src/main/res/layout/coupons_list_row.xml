@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".3"
                     android:fontFamily="@font/semibold"
-                    android:text="25% Off"
+                    android:text="@string/_25_off"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/normal_text" />
 

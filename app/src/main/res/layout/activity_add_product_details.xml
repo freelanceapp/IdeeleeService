@@ -17,7 +17,7 @@
         android:fontFamily="@font/regular"
         android:gravity="left"
         android:padding="@dimen/margin_8dp"
-        android:text="Add Product Details"
+        android:text="@string/add_product_details"
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_17sp" />
 
@@ -39,7 +39,7 @@
             android:background="@drawable/round_corner_ed_graystroke"
             android:fontFamily="@font/regular"
             android:gravity="center_vertical"
-            android:hint="Product Title"
+            android:hint="@string/product_title"
             android:padding="@dimen/margin_12dp"
             android:textSize="@dimen/text_size_15sp" />
 
@@ -53,7 +53,7 @@
             android:fontFamily="@font/regular"
             android:gravity="center_vertical"
             android:padding="@dimen/margin_12dp"
-            android:text="Lunch"
+            android:text="@string/lunch"
             android:textSize="@dimen/text_size_15sp" />
 
         <EditText
@@ -65,7 +65,7 @@
             android:background="@drawable/round_corner_ed_graystroke"
             android:fontFamily="@font/regular"
             android:gravity="center_vertical"
-            android:hint="Price"
+            android:hint="@string/price"
             android:padding="@dimen/margin_12dp"
             android:textSize="@dimen/text_size_15sp" />
 
@@ -77,7 +77,7 @@
             android:background="@drawable/round_corner_ed_graystroke"
             android:fontFamily="@font/regular"
             android:gravity="center_vertical"
-            android:hint="Sub(Ex. Grilled Cottage Cheese + Onion..)"
+            android:hint="@string/sub_ex_grilled_cottage_cheese_onion"
             android:padding="@dimen/margin_12dp"
             android:textSize="@dimen/text_size_15sp" />
 
@@ -90,7 +90,7 @@
             android:layout_marginTop="@dimen/big_margin"
             android:layout_marginRight="@dimen/btn_margin"
             android:background="@drawable/round_corner_button"
-            android:text="Add"
+            android:text="@string/add"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="@dimen/text_size_17sp" />

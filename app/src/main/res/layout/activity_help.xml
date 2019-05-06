@@ -39,7 +39,7 @@
                 android:fontFamily="@font/regular"
                 android:gravity="center_vertical"
                 android:padding="@dimen/small_padding"
-                android:text="About Food"
+                android:text="@string/about_food"
                 android:textColor="@color/black"
                 android:textSize="@dimen/normal_text" />
 
@@ -74,7 +74,7 @@
                 android:background="@drawable/bg_grey"
                 android:fontFamily="@font/regular"
                 android:gravity="top"
-                android:hint="Message"
+                android:hint="@string/message"
                 android:minLines="3"
                 android:padding="@dimen/small_padding"
                 android:textColor="@color/black"

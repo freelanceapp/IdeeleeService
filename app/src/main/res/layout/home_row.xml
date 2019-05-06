@@ -31,7 +31,7 @@
                 android:fontFamily="@font/regular"
                 android:paddingLeft="@dimen/margin_10dp"
                 android:paddingRight="@dimen/margin_10dp"
-                android:text="Featured"
+                android:text="@string/featured"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_13sp"
                 android:textStyle="bold" />
@@ -60,7 +60,7 @@
                     android:layout_alignParentRight="true"
                     android:fontFamily="@font/regular"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Valid 30 Days"
+                    android:text="@string/valid_30_days"
                     android:textColor="@color/orange"
                     android:textSize="@dimen/text_size_15sp" />
             </RelativeLayout>
@@ -85,7 +85,7 @@
                         android:buttonTint="@color/orange"
                         android:checked="true"
                         android:clickable="false"
-                        android:text="2 On Demand Services"
+                        android:text="@string/_2_on_demand_services"
                         android:textColor="@color/black"
                         android:textSize="@dimen/small_txt"
                         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +99,7 @@
                         android:buttonTint="@color/orange"
                         android:checked="true"
                         android:clickable="false"
-                        android:text="1 Delivery Service"
+                        android:text="@string/_1_delivery_service"
                         android:textColor="@color/black"
                         android:textSize="@dimen/small_txt"
                         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/bold"
                     android:gravity="bottom"
-                    android:text="$150.00 Paid"
+                    android:text="@string/_150_00_paid"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/big_text" />
 

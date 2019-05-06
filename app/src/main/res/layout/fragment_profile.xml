@@ -99,7 +99,7 @@
                         android:fontFamily="@font/regular"
                         android:layout_alignParentRight="true"
                         android:padding="@dimen/extra_small"
-                        android:text="Change"
+                        android:text="@string/change"
                         android:drawableLeft="@drawable/location"
                         android:drawablePadding="@dimen/extra_small"
                         android:textSize="@dimen/normal_text" />
@@ -133,7 +133,7 @@
                     android:layout_marginBottom="@dimen/med_padding"
                     android:background="@drawable/square_border"
                     android:fontFamily="@font/regular"
-                    android:hint="johan.doe@example.com"
+                    android:hint="@string/johan_doe_example_com"
                     android:padding="@dimen/small_padding" />
 
                 <Button
@@ -145,7 +145,7 @@
                     android:layout_marginRight="@dimen/big_margin"
                     android:background="@drawable/round_corner_button"
                     android:inputType="textEmailAddress"
-                    android:text="Update"
+                    android:text="@string/update"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_size_17sp" />

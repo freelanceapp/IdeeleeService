@@ -11,37 +11,37 @@
         <item
             android:id="@+id/manageservices"
             android:icon="@drawable/service"
-            android:title="Manage Services" />
+            android:title="@string/manage_services" />
         <item
             android:id="@+id/products"
             android:icon="@drawable/product"
-            android:title="Products" />
+            android:title="@string/products" />
         <item
             android:id="@+id/liveorders"
             android:icon="@drawable/cart"
-            android:title="Live Orders" />
+            android:title="@string/live_orders" />
 
         <item
             android:id="@+id/servicepricing"
             android:icon="@drawable/pricing"
-            android:title="Service Pricing" />
+            android:title="@string/service_pricing" />
 
         <item
             android:id="@+id/mypackage"
             android:icon="@drawable/package_"
-            android:title="My Package" />
+            android:title="@string/my_package" />
         <item
             android:id="@+id/payments"
             android:icon="@drawable/card"
-            android:title="Payments" />
+            android:title="@string/payments" />
         <item
             android:id="@+id/storeinfo"
             android:icon="@drawable/shop_"
-            android:title="Store Info" />
+            android:title="@string/store_info" />
         <item
             android:id="@+id/manageaddress"
             android:icon="@drawable/address"
-            android:title="Manage Address" />
+            android:title="@string/manage_address" />
         <item
             android:id="@+id/add_coupons"
             android:icon="@drawable/coupon_"
@@ -53,11 +53,11 @@
         <item
             android:id="@+id/editpassword"
             android:icon="@drawable/pass"
-            android:title="Edit Password" />
+            android:title="@string/edit_password" />
         <item
             android:id="@+id/logout"
             android:icon="@drawable/logout"
-            android:title="Logout" />
+            android:title="@string/logout" />
 
     </group>
 

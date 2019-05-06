@@ -13,7 +13,7 @@
         android:drawablePadding="@dimen/small_padding"
         android:fontFamily="@font/semibold"
         android:gravity="right"
-        android:text="Home Cleaning"
+        android:text="@string/home_cleaning"
         android:textColor="@color/black"
         android:textSize="@dimen/text_size_15sp" />
 

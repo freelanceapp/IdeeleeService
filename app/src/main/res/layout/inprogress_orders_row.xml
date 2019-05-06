@@ -44,7 +44,7 @@
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Payment:"
+                    android:text="@string/payment"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_13sp" />
 
@@ -55,7 +55,7 @@
                     android:layout_gravity="center"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Cash"
+                    android:text="@string/cash"
                     android:textColor="@android:color/holo_green_dark"
                     android:textSize="@dimen/text_size_15sp" />
             </LinearLayout>
@@ -72,7 +72,7 @@
                 android:layout_alignParentLeft="true"
                 android:fontFamily="@font/semibold"
                 android:padding="@dimen/margin_4dp"
-                android:text=" JACK HARRY"
+                android:text="@string/jack_harry"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_15sp" />
 
@@ -98,7 +98,7 @@
             android:fontFamily="@font/regular"
             android:gravity="center"
             android:padding="@dimen/margin_4dp"
-            android:text="American Burger X1, American Burger X2"
+            android:text="@string/american_burger_x1_american_burger_x2"
             android:textSize="@dimen/text_size_15sp" />
 
         <TextView
@@ -111,7 +111,7 @@
             android:fontFamily="@font/regular"
             android:gravity="center"
             android:padding="@dimen/margin_4dp"
-            android:text="Deliver To"
+            android:text="@string/deliver_to"
             android:textSize="@dimen/text_size_15sp" />
 
         <TextView
@@ -120,7 +120,7 @@
             android:fontFamily="@font/regular"
             android:padding="@dimen/margin_4dp"
             android:layout_marginLeft="@dimen/margin_20dp"
-            android:text="District 2 1323 Riverside Drive Redding"
+            android:text="@string/district_2_1323_riverside_drive_redding"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_15sp" />
 
@@ -151,7 +151,7 @@
                     android:fontFamily="@font/regular"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Order ID :"
+                    android:text="@string/order_id"
 
                     android:textSize="@dimen/text_size_15sp" />
 
@@ -180,7 +180,7 @@
                     android:fontFamily="@font/regular"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Status:"
+                    android:text="@string/status"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_15sp" />
 
@@ -192,7 +192,7 @@
                     android:fontFamily="@font/regular"
                     android:gravity="left"
                     android:padding="@dimen/margin_4dp"
-                    android:text="Dispatched"
+                    android:text="@string/dispatched"
                     android:textColor="@color/orange"
                     android:textSize="@dimen/text_size_15sp" />
             </LinearLayout>
@@ -215,7 +215,7 @@
                 android:background="@drawable/round_edittext_blueborder"
                 android:fontFamily="@font/regular"
 
-                android:text="View"
+                android:text="@string/view"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_size_19sp" />
@@ -229,7 +229,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/round_corner_green_solid"
                 android:fontFamily="@font/regular"
-                android:text="Complete"
+                android:text="@string/complete"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_19sp" />

@@ -44,7 +44,7 @@
                             android:layout_weight="5"
                             android:fontFamily="sans-serif"
                             android:padding="@dimen/small_padding"
-                            android:text="Plumber"
+                            android:text="@string/plumber"
                             android:textColor="@color/black"
                             android:textSize="@dimen/med_text" />
 
@@ -60,7 +60,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/regular"
-                                android:text="Status :"
+                                android:text="@string/status"
                                 android:textColor="@color/txt_light"
                                 android:textSize="@dimen/normal_text" />
 
@@ -69,7 +69,7 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/regular"
                                 android:paddingLeft="@dimen/small_padding"
-                                android:text="Completed"
+                                android:text="@string/completed"
                                 android:textColor="@color/orange"
                                 android:textSize="@dimen/normal_text" />
 
@@ -89,7 +89,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/regular"
                             android:paddingRight="@dimen/small_padding"
-                            android:text="Contact"
+                            android:text="@string/contact"
                             android:textColor="@color/black"
                             android:textSize="@dimen/normal_text" />
 
@@ -127,7 +127,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Customer Name"
+                        android:text="@string/customer_name"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
                     <TextView
@@ -144,7 +144,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Jack Harry"
+                        android:text="@string/jack_harry"
                         android:textColor="@color/txt_light"
                         android:textSize="@dimen/normal_text" />
                 </LinearLayout>
@@ -161,7 +161,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Service Type"
+                        android:text="@string/service_type"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
                     <TextView
@@ -178,7 +178,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Plumber"
+                        android:text="@string/plumber"
                         android:textColor="@color/txt_light"
                         android:textSize="@dimen/normal_text" />
                 </LinearLayout>
@@ -195,7 +195,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Time Slot"
+                        android:text="@string/time_slot"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
                     <TextView
@@ -229,7 +229,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Payment"
+                        android:text="@string/payment"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
                     <TextView
@@ -263,7 +263,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Tax"
+                        android:text="@string/tax"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
                     <TextView
@@ -297,7 +297,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/semibold"
                         android:paddingRight="@dimen/small_padding"
-                        android:text="Total amount to be paid"
+                        android:text="@string/total_amount_to_be_paid"
                         android:textColor="@color/black"
                         android:textSize="@dimen/normal_text" />
                     <TextView
@@ -338,7 +338,7 @@
                             android:fontFamily="sans-serif"
                             android:gravity="center_vertical"
                             android:padding="@dimen/extra_small"
-                            android:text="Order Details"
+                            android:text="@string/order_details"
                             android:textColor="@color/black"
                             android:textSize="@dimen/normal_text" />
 
@@ -356,7 +356,7 @@
                                 android:fontFamily="sans-serif"
                                 android:gravity="center_vertical"
                                 android:padding="@dimen/extra_small"
-                                android:text="Order Number:"
+                                android:text="@string/order_number"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/normal_text" />
 
@@ -385,7 +385,7 @@
                                 android:fontFamily="sans-serif"
                                 android:gravity="center_vertical"
                                 android:padding="@dimen/extra_small"
-                                android:text="Payment"
+                                android:text="@string/payment"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/normal_text" />
 
@@ -414,7 +414,7 @@
                                 android:fontFamily="sans-serif"
                                 android:gravity="center_vertical"
                                 android:padding="@dimen/extra_small"
-                                android:text="Date"
+                                android:text="@string/date"
                                 android:textColor="@color/black"
                                 android:textSize="@dimen/normal_text" />
 
@@ -437,7 +437,7 @@
                             android:fontFamily="sans-serif"
                             android:gravity="center_vertical"
                             android:padding="@dimen/extra_small"
-                            android:text="Location "
+                            android:text="@string/location"
                             android:textColor="@color/black"
                             android:textSize="@dimen/normal_text" />
                         <TextView
