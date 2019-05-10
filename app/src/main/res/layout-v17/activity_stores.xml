@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg_blue"
+    tools:context=".stores.Stores">
+    <include layout="@layout/toolbar_child"/>
+    <TextView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/regular"
+        android:gravity="start"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/add_your_stores"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_17sp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_bg_blue"
+android:layout_marginEnd="@dimen/margin_4dp"
+    android:layout_marginStart="@dimen/margin_4dp"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView_store"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:paddingEnd="@dimen/margin_8dp"
+        android:paddingStart="@dimen/margin_8dp"
+        android:background="@color/white"
+
+        android:layout_height="wrap_content" />
+
+
+
+    <Button
+        android:id="@+id/addnew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_button"
+        android:text="Add New"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:paddingStart="@dimen/btn_margin"
+        android:paddingEnd="@dimen/btn_margin"
+        android:textSize="@dimen/text_size_17sp" />
+</LinearLayout>
+    </LinearLayout>
+

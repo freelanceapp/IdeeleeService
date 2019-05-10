@@ -23,6 +23,7 @@ import com.squareup.picasso.Picasso;
 
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.address.AddAddress;
 import snow.app.ideeleeservice.coupons.CouponsListing;
 import snow.app.ideeleeservice.forgot.EditPassword;
 import snow.app.ideeleeservice.help.HelpActivity;
@@ -126,10 +127,10 @@ public class HomeNavigation extends AppCompatActivity
             startActivity(new Intent(HomeNavigation.this, ServicePackages.class));
         } else if (id == R.id.payments) {
             startActivity(new Intent(HomeNavigation.this, Payments.class));
-
         } else if (id == R.id.storeinfo) {
             startActivity(new Intent(HomeNavigation.this, Stores.class));
         } else if (id == R.id.manageaddress) {
+            startActivity(new Intent(HomeNavigation.this, AddAddress.class));
         } else if (id == R.id.helpsupport) {
             startActivity(new Intent(HomeNavigation.this, HelpActivity.class));
         } else if (id == R.id.editpassword) {

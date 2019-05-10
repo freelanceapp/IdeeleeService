@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_bg_blue"
+    android:orientation="vertical"
+    tools:context=".products.AddProduct">
+
+    <include layout="@layout/toolbar_child" />
+
+
+    <TextView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:fontFamily="@font/regular"
+        android:gravity="start"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/select_a_service_type"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_17sp" />
+
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/square_border_whitebg"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/food_delivery"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/square_border_whitebg"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/gift_gallery"
+
+        android:textSize="@dimen/text_size_15sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/square_border_whitebg"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/liquid_delivery"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/square_border_whitebg"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/food_delivery"
+
+        android:textSize="@dimen/text_size_15sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/square_border_whitebg"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/liquid_delivery"
+
+        android:textSize="@dimen/text_size_15sp" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_4dp"
+        android:background="@drawable/square_border_whitebg"
+        android:padding="@dimen/margin_8dp"
+        android:text="@string/gift_gallery"
+        android:textSize="@dimen/text_size_15sp" />
+
+    <Button
+        android:id="@+id/continue_addproduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_margin"
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_marginEnd="@dimen/btn_margin"
+        android:background="@drawable/round_corner_button"
+        android:text="@string/continue_"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_17sp" />
+</LinearLayout>

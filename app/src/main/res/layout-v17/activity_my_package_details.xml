@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".servicepackages.MyPackageDetails">
+
+    <include layout="@layout/toolbar_child" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/margin_8dp"
+        android:background="@drawable/round_corner_edittext"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_30dp">
+
+
+        <TextView
+
+            android:id="@+id/servicetype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/bold"
+            android:padding="@dimen/margin_4dp"
+            android:text="@string/monthly"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_23sp" />
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:backgroundTint="@color/orange"
+            android:buttonTint="@color/orange"
+            android:checked="true"
+            android:clickable="false"
+            android:text="2 On Demand Services"
+            android:textColor="@color/txt_light"
+            android:textSize="@dimen/text_size_13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:backgroundTint="@color/orange"
+            android:buttonTint="@color/orange"
+            android:checked="true"
+            android:clickable="false"
+            android:text="1 Delivery Service"
+            android:textColor="@color/txt_light"
+            android:textSize="@dimen/text_size_13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/regular"
+            android:padding="@dimen/margin_4dp"
+            android:text="Valid Till 25 May 2019"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/text_size_19sp" />
+
+        <TextView
+            android:id="@+id/ux_txt_ratenow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:fontFamily="@font/bold"
+             android:gravity="bottom"
+            android:text="$150.00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size_27sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30dp"
+            android:background="@drawable/round_edittext_blueborder"
+            android:paddingStart="@dimen/btn_margin"
+            android:paddingEnd="@dimen/btn_margin"
+            android:text="Update Package"
+
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_size_19sp" />
+    </LinearLayout>
+</LinearLayout>

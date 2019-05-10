@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".serviceselection.MoreOnDemand">
+
+    <include layout="@layout/toolbar_child"
+        android:id="@+id/top"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_above="@+id/btm"
+        android:layout_below="@+id/top"
+        android:paddingStart="@dimen/small_padding"
+        android:paddingEnd="@dimen/small_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/btm"
+            android:layout_marginStart="@dimen/small_padding"
+            android:layout_marginEnd="@dimen/small_padding"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/med_padding"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/request_for_a_new_category"
+                android:textColor="@color/black"
+                android:layout_marginBottom="@dimen/med_padding"
+                 android:textSize="@dimen/normal_text"
+                android:fontFamily="@font/semibold"/>
+
+            <TextView
+                android:id="@+id/request_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/white"
+                android:background="@drawable/round_corner_colorprimary"
+                android:text="@string/request_now"
+                android:paddingTop="@dimen/small_padding"
+                android:paddingBottom="@dimen/small_padding"
+                android:paddingStart="@dimen/med_padding"
+                android:paddingEnd="@dimen/med_padding"
+                android:fontFamily="@font/semibold"
+
+                />
+        </LinearLayout>
+</RelativeLayout>

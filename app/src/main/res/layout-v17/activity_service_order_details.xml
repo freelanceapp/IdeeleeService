@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.ServiceOrderDetails">
+
+    <include layout="@layout/toolbar_child" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/extra_small">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/extra_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/res_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:fontFamily="sans-serif"
+                            android:padding="@dimen/small_padding"
+                            android:text="Plumber"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/med_text" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="end"
+                            android:orientation="horizontal"
+                            android:paddingEnd="@dimen/small_padding">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Status :"
+                                android:textColor="@color/txt_light"
+                                android:textSize="@dimen/normal_text" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:paddingStart="@dimen/small_padding"
+                                android:text="Completed"
+                                android:textColor="@color/orange"
+                                android:textSize="@dimen/normal_text" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/small_padding"
+                        android:paddingEnd="@dimen/small_padding">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:paddingEnd="@dimen/small_padding"
+                            android:text="Contact"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normal_text" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/regular"
+                            android:text="+1 5424854766555"
+                            android:textColor="@color/txt_light"
+                            android:textSize="@dimen/normal_text" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/small_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/extra_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Customer Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Jack Harry"
+                        android:textColor="@color/txt_light"
+                        android:textSize="@dimen/normal_text" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/extra_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Service Type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Plumber"
+                        android:textColor="@color/txt_light"
+                        android:textSize="@dimen/normal_text" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/extra_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Time Slot"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="02 PM to 04 PM"
+                        android:textColor="@color/txt_light"
+                        android:textSize="@dimen/normal_text" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/extra_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Payment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="$15.00"
+                        android:textColor="@color/txt_light"
+                        android:textSize="@dimen/normal_text" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/extra_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Tax"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="$01.00"
+                        android:textColor="@color/txt_light"
+                        android:textSize="@dimen/normal_text" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/extra_small"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="Total amount to be paid"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text=":"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/semibold"
+                        android:paddingEnd="@dimen/small_padding"
+                        android:text="$16.00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/normal_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/small_padding">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/extra_small"
+                            android:text="Order Details"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normal_text" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grey_divider"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/extra_small"
+                            android:paddingBottom="@dimen/extra_small">.
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/extra_small"
+                                android:text="Order Number:"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/normal_text" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/extra_small"
+                                android:text="124578547"
+                                android:textColor="@color/txt_light"
+                                android:textSize="@dimen/normal_text" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grey_divider"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/extra_small"
+                            android:paddingBottom="@dimen/extra_small">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/extra_small"
+                                android:text="Payment"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/normal_text" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/extra_small"
+                                android:text="@string/online_payment"
+                                android:textColor="@color/green"
+                                android:textSize="@dimen/normal_text" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grey_divider"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/extra_small"
+                            android:paddingBottom="@dimen/extra_small">.
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/extra_small"
+                                android:text="Date"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/normal_text" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/extra_small"
+                                android:text="21 Apr, 2019 11:40 am"
+                                android:textColor="@color/txt_light"
+                                android:textSize="@dimen/normal_text" />
+
+                        </LinearLayout>
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/extra_small"
+                            android:text="Location "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/normal_text" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/extra_small"
+                            android:text="@string/_121_cresent_avenue_drybeck"
+                            android:textColor="@color/txt_light"
+                            android:textSize="@dimen/normal_text" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
