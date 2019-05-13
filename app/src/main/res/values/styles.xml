@@ -27,6 +27,7 @@
     <style name="MyEditViewStyle" parent="android:Widget.EditText">
         <item name="android:fontFamily">@font/regular</item>
     </style>
+
     <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
         <item name="android:fontFamily">@font/bold</item>

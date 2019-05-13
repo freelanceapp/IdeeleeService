@@ -19,6 +19,7 @@
         android:layout_height="match_parent" />
         <LinearLayout
             android:id="@+id/btm"
+            android:visibility="gone"
             android:layout_marginLeft="@dimen/small_padding"
             android:layout_marginRight="@dimen/small_padding"
             android:layout_alignParentBottom="true"
@@ -51,4 +52,23 @@
 
                 />
         </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_text"
+android:id="@+id/txt_continue"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_corner_colorprimary"
+        android:text="@string/continue_"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingLeft="@dimen/med_padding"
+        android:paddingRight="@dimen/med_padding"
+        android:fontFamily="@font/semibold"
+
+        />
 </RelativeLayout>

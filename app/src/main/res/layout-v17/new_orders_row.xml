@@ -269,7 +269,7 @@
                 android:gravity="center"
                 android:paddingTop="@dimen/small_padding"
                 android:paddingBottom="@dimen/small_padding"
-                android:text="Accept Job"
+                android:text="@string/accept_job"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_txt" />

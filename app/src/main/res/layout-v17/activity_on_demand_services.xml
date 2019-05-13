@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_bg_blue"
+    android:layout_height="match_parent"
+    tools:context=".servicesnew.OnDemandServices">
+    <include layout="@layout/toolbar_child"
+        android:id="@+id/topbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/select_cat"
+        android:background="@color/white"
+        android:padding="@dimen/margin_10dp"
+        android:layout_below="@+id/topbar"
+        android:layout_height="wrap_content"
+      android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:fontFamily="@font/semibold"
+        android:text="Select Service Category"
+        android:textSize="@dimen/normal_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/select_subcat"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_below="@+id/select_cat"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:padding="@dimen/margin_10dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/semibold"
+        android:text="Select a Subcategory"
+        android:textSize="@dimen/normal_text" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ondemandservices"
+        android:layout_below="@+id/select_subcat"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+android:layout_above="@+id/request_now"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_text"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:id="@+id/request_now"
+        android:layout_marginTop="@dimen/margin_10dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_corner_colorprimary"
+        android:text="@string/request_new"
+        android:paddingTop="@dimen/small_padding"
+        android:paddingBottom="@dimen/small_padding"
+        android:paddingStart="@dimen/med_padding"
+        android:paddingEnd="@dimen/med_padding"
+        android:fontFamily="@font/semibold"
+
+        />
+</RelativeLayout>

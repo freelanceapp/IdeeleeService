@@ -1,5 +1,6 @@
 package snow.app.ideeleeservice.services.ondemandservices.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,16 +8,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.services.deliveryservices.adapter.DeliveryFragmentAdapter;
+import snow.app.ideeleeservice.servicesnew.OnDemandServices;
 
 
 public class OnDemandFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList<String> serviceproviderlist;
+    Button btn;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,7 +50,13 @@ public class OnDemandFragment extends Fragment {
         serviceproviderlist.add("DF");
         serviceproviderlist.add("DF");
 
-
+        btn=v.findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), OnDemandServices.class));
+            }
+        });
         DeliveryFragmentAdapter adapter = new DeliveryFragmentAdapter(getActivity(), serviceproviderlist);
         recyclerView.setAdapter(adapter);
         return v;

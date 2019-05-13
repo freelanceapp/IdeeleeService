@@ -1,6 +1,7 @@
 package snow.app.ideeleeservice.serviceselection;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,13 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import snow.app.ideeleeservice.R;
+import snow.app.ideeleeservice.home.HomeNavigation;
 import snow.app.ideeleeservice.serviceselection.adapter.DeliveryServiceAdapter;
 import snow.app.ideeleeservice.serviceselection.adapter.OnDemandAdapter;
 
 public class DelieveryService extends AppCompatActivity {
     RecyclerView rv;
     DeliveryServiceAdapter onDemandAdapter;
-    TextView title;
+    TextView title,proceed;
     TextView request_now;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class DelieveryService extends AppCompatActivity {
         rv = (RecyclerView) findViewById(R.id.rv);
         title =  findViewById(R.id.title);
         request_now =  findViewById(R.id.request_now);
+        proceed =  findViewById(R.id.proceed);
         title.setText(getString(R.string.delivery_services));
         rv.setLayoutManager(new LinearLayoutManager(this));
         List<String> del_list = new ArrayList<>();
@@ -65,6 +68,12 @@ public class DelieveryService extends AppCompatActivity {
                 dialog.show();
 
 
+            }
+        });
+        proceed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DelieveryService.this, HomeNavigation.class));
             }
         });
     }

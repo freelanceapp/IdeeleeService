@@ -7,7 +7,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -16,7 +19,7 @@ import snow.app.ideeleeservice.R;
 
 public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ProductViewHolder> {
 
-
+    String imageUri = "https://i.imgur.com/tGbaZCY.jpg";
     //this context we will use to inflate the layout
     private Context mCtx;
 
@@ -52,7 +55,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ProductViewH
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-
+ImageView imageView;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
