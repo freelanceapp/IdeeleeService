@@ -21,10 +21,10 @@
             android:icon="@drawable/cart"
             android:title="@string/live_orders" />
 
-        <item
-            android:id="@+id/servicepricing"
-            android:icon="@drawable/pricing"
-            android:title="@string/service_pricing" />
+        <!--<item-->
+            <!--android:id="@+id/servicepricing"-->
+            <!--android:icon="@drawable/pricing"-->
+            <!--android:title="@string/service_pricing" />-->
 
         <item
             android:id="@+id/mypackage"

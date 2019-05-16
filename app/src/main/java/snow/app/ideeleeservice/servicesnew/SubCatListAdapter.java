@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -69,15 +70,17 @@ public class SubCatListAdapter extends RecyclerView.Adapter<SubCatListAdapter.Pr
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
         TextView cat;
+        LinearLayout linearLayout;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
 
             cat = itemView.findViewById(R.id.cat);
+            linearLayout=itemView.findViewById(R.id.subcatdialoglayout);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    subcatdetails(v);
+                   linearLayout.setVisibility(View.VISIBLE);
                 }
             });
 

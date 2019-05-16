@@ -1,34 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-  android:orientation="vertical"
- android:background="@color/light_bg_blue"
+    android:orientation="vertical"
+    android:background="@color/light_bg_blue"
     android:layout_height="wrap_content">
 
 
     <RelativeLayout
-    android:layout_width="match_parent"
-    android:background="@color/white"
-    android:padding="@dimen/margin_8dp"
-android:layout_marginTop="@dimen/margin_2dp"
-    android:layout_height="wrap_content">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/cat"
+        android:layout_width="match_parent"
+        android:background="@color/white"
         android:padding="@dimen/margin_8dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/semibold"
-        android:layout_alignParentStart="true"
-        android:text="Vehicle Services"
-        android:textSize="@dimen/text_size_19sp" />
+        android:id="@+id/rl"
+        android:layout_marginTop="@dimen/margin_2dp"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_centerVertical="true"
-        android:src="@drawable/ic_arrow_drop_down_black_24dp"
-        android:layout_alignParentEnd="true"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/cat"
+            android:padding="@dimen/margin_8dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/semibold"
+            android:layout_alignParentStart="true"
+            android:text="Vehicle Services"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_drop_down_black_24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/margin_8dp"
+        android:visibility="gone"
+        android:id="@+id/subcatdialoglayout"
+        android:layout_marginTop="@dimen/margin_4dp"
+        android:layout_marginBottom="@dimen/margin_4dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/rl"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/med_padding"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/med_padding"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner_ed_graystroke"
+                android:fontFamily="@font/semibold"
+                android:gravity="center"
+                android:inputType="number"
+                android:hint="(Price in $)"
+                android:padding="@dimen/small_padding"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text" />
+
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner_ed_graystroke"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+                android:drawableTint="@color/gray"
+                android:fontFamily="@font/semibold"
+                android:gravity="center"
+                android:padding="@dimen/small_padding"
+                android:text="Per Day"
+                android:textColor="@color/black"
+                android:textSize="@dimen/normal_text" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/med_padding"
+            >
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/extra_small"
+                android:adjustViewBounds="true"
+                android:src="@drawable/square" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/med_padding"
+            android:background="@drawable/round_corner_ed_graystroke"
+            android:fontFamily="@font/regular"
+            android:gravity="top"
+            android:hint="Additional Notes"
+            android:minLines="5"
+            android:padding="@dimen/small_padding" />
+        <!--<Button-->
+        <!--android:id="@+id/ux_btn"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_50dp"-->
+        <!--android:layout_marginRight="@dimen/margin_50dp"-->
+        <!--android:background="@drawable/round_corner_colorprimary"-->
+        <!--android:fontFamily="@font/regular"-->
+        <!--android:text="Add"-->
+        <!--android:layout_marginTop="@dimen/margin_20dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/text_size_19sp" />-->
+    </LinearLayout>
 </RelativeLayout>

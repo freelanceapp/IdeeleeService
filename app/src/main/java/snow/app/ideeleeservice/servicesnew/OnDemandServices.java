@@ -1,14 +1,17 @@
 package snow.app.ideeleeservice.servicesnew;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,6 +25,7 @@ import ir.mirrajabi.searchdialog.core.SearchResultListener;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.servicepackages.ServicePackages;
 import snow.app.ideeleeservice.servicepackages.adapter.ServicePackagesAdapter;
+import snow.app.ideeleeservice.serviceselection.DelieveryService;
 
 public class OnDemandServices extends Activity {
 RecyclerView recyclerView;
@@ -38,6 +42,7 @@ ArrayList<String> serviceproviderlist;
         title=(TextView)findViewById(R.id.title);
         select_cat=(TextView)findViewById(R.id.select_cat);
         select_subcat=(TextView)findViewById(R.id.select_subcat);
+        request_now=(TextView)findViewById(R.id.request_now);
 
         title.setText("On Demand Services");
         backbutton1.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +88,28 @@ ArrayList<String> serviceproviderlist;
                         }).show();
             }
         });
+        request_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(OnDemandServices.this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.request_category_pop);
+                Button submit=dialog.findViewById(R.id.submit);
+                submit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                int width = (int)(getResources().getDisplayMetrics().widthPixels*0.90);
+                int height = (int)(getResources().getDisplayMetrics().heightPixels*.50);
 
+                dialog.getWindow().setLayout(width, height);
+                dialog.show();
+
+
+            }
+        });
     }
 
     private ArrayList<SampleSearchModel> createSampleData(){

@@ -1,5 +1,6 @@
 package snow.app.ideeleeservice.help;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -19,6 +20,8 @@ public class HelpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
+      //  ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_help);
+
         backbutton1=(ImageView)findViewById(R.id.back);
         notification=(ImageView)findViewById(R.id.notification);
         title=(TextView) findViewById(R.id.title);

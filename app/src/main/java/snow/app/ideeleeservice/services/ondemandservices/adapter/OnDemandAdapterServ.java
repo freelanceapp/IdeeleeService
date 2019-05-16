@@ -59,7 +59,7 @@ public class OnDemandAdapterServ extends RecyclerView.Adapter<OnDemandAdapterSer
                 remove.setText("Remove");
                 remove.setTextColor(ContextCompat.getColor(mCtx, R.color.red));
                 remove.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                        mCtx.getResources().getDimension(R.dimen.normal_text));
+                        mCtx.getResources().getDimension(R.dimen.text_size_13sp));
 /*
                         remove.setCompoundDrawablePadding(8);
 */
@@ -79,9 +79,9 @@ public class OnDemandAdapterServ extends RecyclerView.Adapter<OnDemandAdapterSer
                 checkBox.setText(data.get(i));
                 checkBox.setTextColor(ContextCompat.getColor(mCtx, R.color.txt_light));
                 checkBox.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                        mCtx.getResources().getDimension(R.dimen.normal_text));
+                        mCtx.getResources().getDimension(R.dimen.text_size_13sp));
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                layoutParams.setMargins(8, 8, 8, 8);
+                layoutParams.setMargins(15, 5, 5, 5);
                 checkBox.setLayoutParams(layoutParams);
                 checkBox.setPadding(15, 5, 5, 5);
                 relativeLayout.addView(checkBox);
