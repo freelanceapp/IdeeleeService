@@ -15,6 +15,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 
@@ -46,16 +48,16 @@ public class OnDemandAdapterServ extends RecyclerView.Adapter<OnDemandAdapterSer
         holder.check.setText(productList.get(position));
         holder.child_view.setVisibility(View.VISIBLE);
         holder.child_view.removeAllViews();
-        if (position==0){
+        if (position == 0) {
             ArrayList<String> data = new ArrayList<>();
             data.add("Fast Food");
             data.add("Italian");
             data.add("Deserts");
             for (int i = 0; i < data.size(); i++) {
-                RelativeLayout relativeLayout= new RelativeLayout(mCtx);
-                ViewGroup.LayoutParams rlp= new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                RelativeLayout relativeLayout = new RelativeLayout(mCtx);
+                ViewGroup.LayoutParams rlp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 relativeLayout.setLayoutParams(rlp);
-                TextView remove=new TextView(mCtx);
+                TextView remove = new TextView(mCtx);
                 remove.setText("Remove");
                 remove.setTextColor(ContextCompat.getColor(mCtx, R.color.red));
                 remove.setTextSize(TypedValue.COMPLEX_UNIT_PX,
@@ -63,16 +65,16 @@ public class OnDemandAdapterServ extends RecyclerView.Adapter<OnDemandAdapterSer
 /*
                         remove.setCompoundDrawablePadding(8);
 */
-                remove.setPadding(0,0,10,0);
-                Drawable image = mCtx.getResources().getDrawable( R.drawable.cross_ );
+                remove.setPadding(0, 0, 10, 0);
+                Drawable image = mCtx.getResources().getDrawable(R.drawable.cross_);
                 int h = image.getIntrinsicHeight();
                 int w = image.getIntrinsicWidth();
-                image.setBounds( 0, 0, w, h );
-                remove.setCompoundDrawables( image, null, null, null );
+                image.setBounds(0, 0, w, h);
+                remove.setCompoundDrawables(image, null, null, null);
                 remove.setCompoundDrawablePadding(15);
-                RelativeLayout.LayoutParams llp= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                RelativeLayout.LayoutParams llp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 llp.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-                llp.setMargins(0,0,10,0);
+                llp.setMargins(0, 0, 10, 0);
                 remove.setLayoutParams(llp);
                 relativeLayout.addView(remove);
                 final TextView checkBox = new TextView(mCtx);
@@ -102,14 +104,15 @@ public class OnDemandAdapterServ extends RecyclerView.Adapter<OnDemandAdapterSer
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.check)
         TextView check;
+        @BindView(R.id.child_view)
         LinearLayout child_view;
 
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-            check = itemView.findViewById(R.id.check);
-            child_view = itemView.findViewById(R.id.child_view);
+            ButterKnife.bind(this,itemView);
             child_view.setVisibility(View.VISIBLE);
         }
     }

@@ -6,17 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.address.AddAddress;
 
 
 public class OTP extends Activity {
-Button btn_continue_otpPage;
+@BindView(R.id.ux_btn_continue_otpPage) Button btn_continue_otpPage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-        btn_continue_otpPage=findViewById(R.id.ux_btn_continue_otpPage);
+        ButterKnife.bind(this);
         btn_continue_otpPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

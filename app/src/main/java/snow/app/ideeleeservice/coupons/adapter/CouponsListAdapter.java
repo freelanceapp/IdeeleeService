@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.coupons.CouponDetails;
 
@@ -52,11 +54,12 @@ public class CouponsListAdapter extends RecyclerView.Adapter<CouponsListAdapter.
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.edit)
+        LinearLayout edit;
 
-    LinearLayout edit;
         public ProductViewHolder(View itemView) {
             super(itemView);
-            edit=itemView.findViewById(R.id.edit);
+            ButterKnife.bind(this,itemView);
             edit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

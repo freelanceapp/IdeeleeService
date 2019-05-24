@@ -21,6 +21,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.address.AddAddress;
@@ -39,12 +41,16 @@ import snow.app.ideeleeservice.stores.Stores;
 
 public class HomeNavigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.nav_view)
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_navigation);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
         toolbar.inflateMenu(R.menu.home_navigation);
         setFragment(new OrderHomeFragment(), "Home");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -52,11 +58,7 @@ public class HomeNavigation extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         View v = navigationView.getHeaderView(0);
         ImageView img = v.findViewById(R.id.img);
         WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
@@ -64,8 +66,6 @@ public class HomeNavigation extends AppCompatActivity
         wm.getDefaultDisplay().getMetrics(displayMetrics);
         int height = displayMetrics.heightPixels;
         int width = displayMetrics.widthPixels;
-
-
         Picasso.with(this)
                 .load("https://pbs.twimg.com/profile_images/572905100960485376/GK09QnNG.jpeg")
                 .resize(width / 5, width / 5)

@@ -218,6 +218,7 @@
     <string name="deliver_to">Deliver To</string>
     <string name="order_number">Order Number</string>
     <string name="add_coupon">Add Coupon</string>
+    <string name="coupons">Coupons</string>
     <string name="title_activity_sub_category_list">SubCategoryLIst</string>
     <string name="request_new">Request New</string>
     <string name="proceed">Proceed</string>

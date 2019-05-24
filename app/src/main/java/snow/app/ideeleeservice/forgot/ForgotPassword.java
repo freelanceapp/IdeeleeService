@@ -8,19 +8,24 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.login.Login;
 import snow.app.ideeleeservice.R;
 
 
 public class ForgotPassword extends AppCompatActivity {
+    @BindView
+            (R.id.login)
     TextView login;
+    @BindView(R.id.txt_note)
     TextView txt_note;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
-        login=(TextView)findViewById(R.id.login);
-        txt_note=(TextView)findViewById(R.id.txt_note);
+        ButterKnife.bind(this);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

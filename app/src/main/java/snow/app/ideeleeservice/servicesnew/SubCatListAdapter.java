@@ -23,6 +23,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import me.gujun.android.taggroup.TagGroup;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.serviceselection.MoreOnDemand;
@@ -69,18 +71,18 @@ public class SubCatListAdapter extends RecyclerView.Adapter<SubCatListAdapter.Pr
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.cat)
         TextView cat;
+        @BindView(R.id.subcatdialoglayout)
         LinearLayout linearLayout;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-
-            cat = itemView.findViewById(R.id.cat);
-            linearLayout=itemView.findViewById(R.id.subcatdialoglayout);
+            ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                   linearLayout.setVisibility(View.VISIBLE);
+                    linearLayout.setVisibility(View.VISIBLE);
                 }
             });
 
@@ -106,6 +108,5 @@ public class SubCatListAdapter extends RecyclerView.Adapter<SubCatListAdapter.Pr
         pw.showAsDropDown(v, 0, 0);
 
 
-
-}
+    }
 }

@@ -10,20 +10,25 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.neworder.adapter.NewJobAdapter;
 
 public class NewOrderFragment extends Fragment {
-RecyclerView recyclerView;
-ArrayList<String> serviceproviderlist;
+    @BindView(R.id.recyclerView_neworder)
+    RecyclerView recyclerView;
+    ArrayList<String> serviceproviderlist;
+    private Unbinder unbinder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v=inflater.inflate(R.layout.fragment_new_order, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView_neworder);
+        View v = inflater.inflate(R.layout.fragment_new_order, container, false);
+        unbinder = ButterKnife.bind(this, v);
         serviceproviderlist = new ArrayList<>();
-
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
@@ -54,6 +59,12 @@ ArrayList<String> serviceproviderlist;
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
         return v;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }
 

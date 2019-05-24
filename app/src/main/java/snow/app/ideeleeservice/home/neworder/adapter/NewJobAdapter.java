@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 
@@ -47,7 +49,7 @@ public class NewJobAdapter extends RecyclerView.Adapter<NewJobAdapter.ProductVie
             holder.title.setText("Jack Harry");
             holder.by.setText("Status:");
             holder.name.setText("Pending");
-            holder.name.setTextColor(ContextCompat.getColor(mCtx,R.color.orange));
+            holder.name.setTextColor(ContextCompat.getColor(mCtx, R.color.orange));
             holder.txt_callnow.setText("View");
             holder.time.setVisibility(View.GONE);
             holder.txt_callnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
@@ -65,20 +67,24 @@ public class NewJobAdapter extends RecyclerView.Adapter<NewJobAdapter.ProductVie
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView ordersummary, title, by, time, txt_callnow, name;
+        @BindView
+                (R.id.ordersummary)
+        TextView ordersummary;
+        @BindView(R.id.title)
+        TextView title;
+        @BindView(R.id.txt_by)
+        TextView by;
+        @BindView(R.id.time)
+        TextView time;
+        @BindView(R.id.txt_callnow)
+        TextView txt_callnow;
+        @BindView(R.id.name)
+        TextView name;
 
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-            ordersummary = itemView.findViewById(R.id.ordersummary);
-            title = itemView.findViewById(R.id.title);
-            by = itemView.findViewById(R.id.txt_by);
-            name = itemView.findViewById(R.id.name);
-
-            txt_callnow = itemView.findViewById(R.id.txt_callnow);
-            time = itemView.findViewById(R.id.time);
-
-
+            ButterKnife.bind(this, itemView);
         }
     }
 }

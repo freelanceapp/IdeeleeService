@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
 
@@ -22,15 +25,17 @@ public class ProfileFragment extends Fragment {
 
 
     public ProfileFragment() {
-     }
+    }
 
-ImageView img;
+    private Unbinder unbinder;
+    @BindView(R.id.img)
+    ImageView img;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v=inflater.inflate(R.layout.fragment_profile, container, false);
-        img=(ImageView)v.findViewById(R.id.img);
-
+        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        unbinder = ButterKnife.bind(this, v);
         WindowManager wm = (WindowManager) getActivity().getSystemService(WINDOW_SERVICE);
         final DisplayMetrics displayMetrics = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(displayMetrics);
@@ -47,7 +52,9 @@ ImageView img;
         return v;
     }
 
-
-
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
 }

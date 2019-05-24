@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.OrderDetails;
 import snow.app.ideeleeservice.home.ServiceOrderDetails;
@@ -22,6 +24,7 @@ public class JobCompletedAdapter extends RecyclerView.Adapter<JobCompletedAdapte
 
     private Context mCtx;
     private List<String> productList;
+
     public JobCompletedAdapter(Context mCtx, List<String> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
@@ -44,17 +47,16 @@ public class JobCompletedAdapter extends RecyclerView.Adapter<JobCompletedAdapte
             holder.txt_status_completed.setText("By:");
 
             holder.txt_status_value_completed.setText("Jack Harry");
-            holder.txt_status_value_completed.setTextColor(ContextCompat.getColor(mCtx,R.color.colorPrimary));
-
+            holder.txt_status_value_completed.setTextColor(ContextCompat.getColor(mCtx, R.color.colorPrimary));
 
 
         }
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (position!=0){
+                if (position != 0) {
                     mCtx.startActivity(new Intent(mCtx, OrderDetails.class));
-                }else {
+                } else {
                     mCtx.startActivity(new Intent(mCtx, ServiceOrderDetails.class));
                 }
             }
@@ -71,18 +73,23 @@ public class JobCompletedAdapter extends RecyclerView.Adapter<JobCompletedAdapte
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView name,ordersummary_completed,status_completed,txt_status_completed,txt_status_value_completed;
+        @BindView
+                (R.id.name_completed)
+        TextView name;
+        @BindView(R.id.ordersummary_completed)
+        TextView ordersummary_completed;
+        @BindView(R.id.status_completed)
+        TextView status_completed;
+        @BindView(R.id.txt_status_completed)
+        TextView txt_status_completed;
+        @BindView(R.id.txt_status_value_completed)
+        TextView txt_status_value_completed;
+        @BindView(R.id.parent)
         LinearLayout parent;
+
         public ProductViewHolder(View itemView) {
             super(itemView);
-            name=itemView.findViewById(R.id.name_completed);
-            ordersummary_completed=itemView.findViewById(R.id.ordersummary_completed);
-            status_completed=itemView.findViewById(R.id.status_completed);
-            txt_status_completed=itemView.findViewById(R.id.txt_status_completed);
-            txt_status_value_completed=itemView.findViewById(R.id.txt_status_value_completed);
-            parent=itemView.findViewById(R.id.parent);
-
-
+            ButterKnife.bind(this, itemView);
         }
     }
 }

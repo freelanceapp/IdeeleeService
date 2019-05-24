@@ -17,6 +17,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.extrafiles.ConnectivityReceiver;
 import snow.app.ideeleeservice.extrafiles.MyApplication;
 import snow.app.ideeleeservice.home.HomeNavigation;
@@ -27,23 +29,29 @@ import snow.app.ideeleeservice.servicesnew.OnDemandServices;
 
 public class AddAddress extends AppCompatActivity implements OnMapReadyCallback,
         ConnectivityReceiver.ConnectivityReceiverListener {
+
     SupportMapFragment mapFragment;
+    @BindView(R.id.addmoredetails)
     TextView addmoredetails;
+    @BindView(R.id.txt_confirmlocation)
     TextView txt_confirmlocation;
+    @BindView(R.id.title)
     TextView title_bookingappointement;
-WindowManager wm;
-ImageView imgonline;
-int height;
-DisplayMetrics displayMetrics;
+    @BindView(R.id.ux_btn1)
+    TextView textView;
+    @BindView(R.id.back)
+    ImageView backbutton1;
+    WindowManager wm;
+    ImageView imgonline;
+    int height;
+    DisplayMetrics displayMetrics;
     String imageUri = "https://i.imgur.com/tGbaZCY.jpg";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_address);
-        txt_confirmlocation = findViewById(R.id.txt_confirmlocation);
-        addmoredetails = findViewById(R.id.addmoredetails);
-        title_bookingappointement = findViewById(R.id.title);
-
+        ButterKnife.bind(this);
         checkConnection();
 
         addmoredetails.setOnClickListener(new View.OnClickListener() {
@@ -54,29 +62,29 @@ DisplayMetrics displayMetrics;
                 findViewById(R.id.txt_confirmlocation).setVisibility(View.VISIBLE);
             }
         });
-        findViewById(R.id.txt_confirmlocation).setOnClickListener(new View.OnClickListener() {
+        txt_confirmlocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity( new Intent(AddAddress.this, HomeNavigation.class));
+                startActivity(new Intent(AddAddress.this, HomeNavigation.class));
             }
         });
-        findViewById(R.id.ux_btn1).setOnClickListener(new View.OnClickListener() {
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity( new Intent(AddAddress.this, HomeNavigation.class));
+                startActivity(new Intent(AddAddress.this, HomeNavigation.class));
             }
         });
- findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-         wm = (WindowManager) getSystemService(WINDOW_SERVICE);
-          displayMetrics = new DisplayMetrics();
+        wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+        displayMetrics = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(displayMetrics);
-         height = displayMetrics.heightPixels;
-        System.out.println("height of screen---"+height);
+        height = displayMetrics.heightPixels;
+        System.out.println("height of screen---" + height);
         int width = displayMetrics.widthPixels;
         title_bookingappointement.setText("Add Address");
 
@@ -86,7 +94,7 @@ DisplayMetrics displayMetrics;
 
 
         ViewGroup.LayoutParams params = mapFragment.getView().getLayoutParams();
-        params.height = height/2;
+        params.height = height / 2;
         mapFragment.getView().setLayoutParams(params);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -129,6 +137,7 @@ DisplayMetrics displayMetrics;
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -139,21 +148,22 @@ DisplayMetrics displayMetrics;
 
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
-        if(!isConnected) {
+        if (!isConnected) {
 
             Toast.makeText(this, "No internet connection", Toast.LENGTH_SHORT).show();
 
-        }else{
+        } else {
 //
 //            Intent refresh = new Intent(this, AddAddress.class);
 //            startActivity(refresh);//Start the same Activity
 //            finish();
         }
-    
+
     }
+
     private void checkConnection() {
         boolean isConnected = ConnectivityReceiver.isConnected();
-        if(!isConnected) {
+        if (!isConnected) {
             //show a No Internet Alert or Dialog
             Toast.makeText(this, "No internet connection", Toast.LENGTH_SHORT).show();
         }

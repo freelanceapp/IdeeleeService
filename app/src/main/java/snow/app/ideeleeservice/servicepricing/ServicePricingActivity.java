@@ -5,24 +5,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.servicepricing.adapter.ActiveServiceAdapter;
 
 public class ServicePricingActivity extends AppCompatActivity {
-    RecyclerView service_rv;
+    @BindView(R.id.service_rv) RecyclerView service_rv;
     ActiveServiceAdapter activeServiceAdapter;
-    TextView title;
-
+   @BindView(R.id.title) TextView title;
+@BindView(R.id.back)
+    ImageView backbutton1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_pricing);
-        service_rv = (RecyclerView) findViewById(R.id.service_rv);
-        title = findViewById(R.id.title);
+        ButterKnife.bind(this);
         service_rv.setLayoutManager(new LinearLayoutManager(this));
         ArrayList<String> data = new ArrayList<String>();
         data.add("Car Repairing");
@@ -32,7 +35,7 @@ public class ServicePricingActivity extends AppCompatActivity {
         service_rv.setAdapter(activeServiceAdapter);
         activeServiceAdapter.notifyDataSetChanged();
 
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+       backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

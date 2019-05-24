@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import ir.mirrajabi.searchdialog.SimpleSearchDialogCompat;
 import ir.mirrajabi.searchdialog.core.BaseSearchDialogCompat;
 import ir.mirrajabi.searchdialog.core.SearchResultListener;
@@ -28,22 +30,26 @@ import snow.app.ideeleeservice.servicepackages.adapter.ServicePackagesAdapter;
 import snow.app.ideeleeservice.serviceselection.DelieveryService;
 
 public class OnDemandServices extends Activity {
-RecyclerView recyclerView;
-ArrayList<String> serviceproviderlist;
+    @BindView(R.id.ondemandservices)
+    RecyclerView recyclerView;
+    ArrayList<String> serviceproviderlist;
+    @BindView(R.id.back)
     ImageView backbutton1;
-    TextView title,select_cat,select_subcat,request_now;
+    @BindView(R.id.title)
+    TextView title;
+    @BindView(R.id.select_cat)
+    TextView select_cat;
+    @BindView(R.id.select_subcat)
+    TextView select_subcat;
+    @BindView(R.id.request_now)
+    TextView request_now;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_demand_services);
-      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        backbutton1=(ImageView)findViewById(R.id.back);
-        title=(TextView)findViewById(R.id.title);
-        select_cat=(TextView)findViewById(R.id.select_cat);
-        select_subcat=(TextView)findViewById(R.id.select_subcat);
-        request_now=(TextView)findViewById(R.id.request_now);
-
+        ButterKnife.bind(this);
         title.setText("On Demand Services");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +57,6 @@ ArrayList<String> serviceproviderlist;
                 onBackPressed();
             }
         });
-        recyclerView = (RecyclerView)findViewById(R.id.ondemandservices);
         serviceproviderlist = new ArrayList<>();
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager
@@ -94,15 +99,15 @@ ArrayList<String> serviceproviderlist;
                 final Dialog dialog = new Dialog(OnDemandServices.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.request_category_pop);
-                Button submit=dialog.findViewById(R.id.submit);
+                Button submit = dialog.findViewById(R.id.submit);
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         dialog.dismiss();
                     }
                 });
-                int width = (int)(getResources().getDisplayMetrics().widthPixels*0.90);
-                int height = (int)(getResources().getDisplayMetrics().heightPixels*.50);
+                int width = (int) (getResources().getDisplayMetrics().widthPixels * 0.90);
+                int height = (int) (getResources().getDisplayMetrics().heightPixels * .50);
 
                 dialog.getWindow().setLayout(width, height);
                 dialog.show();
@@ -112,7 +117,7 @@ ArrayList<String> serviceproviderlist;
         });
     }
 
-    private ArrayList<SampleSearchModel> createSampleData(){
+    private ArrayList<SampleSearchModel> createSampleData() {
         ArrayList<SampleSearchModel> items = new ArrayList<>();
         items.add(new SampleSearchModel("Vehicle Service"));
         items.add(new SampleSearchModel("Shopping & Delivery Services"));

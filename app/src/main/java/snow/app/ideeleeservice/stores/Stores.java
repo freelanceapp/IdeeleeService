@@ -12,31 +12,37 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.accepted.adapter.AcceptedJobAdapter;
 import snow.app.ideeleeservice.stores.adapter.StoreAdapter;
 
 public class Stores extends AppCompatActivity {
+    @BindView
+            (R.id.recyclerView_store)
     RecyclerView recyclerView;
     ArrayList<String> serviceproviderlist;
+    @BindView(R.id.back)
     ImageView backbutton1;
+    @BindView(R.id.notification)
     ImageView notification;
+    @BindView(R.id.title)
     TextView title;
+    @BindView(R.id.addnew)
     Button addnew;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stores);
-        backbutton1=(ImageView)findViewById(R.id.back);
-        notification=(ImageView)findViewById(R.id.notification);
-        addnew=(Button) findViewById(R.id.addnew);
+        ButterKnife.bind(this);
         addnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Stores.this,StoreDetails.class));
+                startActivity(new Intent(Stores.this, StoreDetails.class));
             }
         });
-        title=(TextView) findViewById(R.id.title);
         title.setText("Stores");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +50,7 @@ public class Stores extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView_store);
+
         serviceproviderlist = new ArrayList<>();
 
         recyclerView.setHasFixedSize(true);

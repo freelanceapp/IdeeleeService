@@ -10,23 +10,24 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.accepted.adapter.AcceptedJobAdapter;
 import snow.app.ideeleeservice.home.neworder.adapter.NewJobAdapter;
 
 public class AcceptedOrderFragment extends Fragment {
-RecyclerView recyclerView;
+  @BindView(R.id.recyclerView_acceptedorder) RecyclerView recyclerView;
 ArrayList<String> serviceproviderlist;
-
+        private Unbinder unbinder;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 View v=inflater.inflate(R.layout.fragment_accepted_order, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView_acceptedorder);
+            unbinder = ButterKnife.bind(this, v);
         serviceproviderlist = new ArrayList<>();
-
         recyclerView.setHasFixedSize(true);
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
 //        serviceproviderlist.add(
 //                new ActiveJobModal(
@@ -56,5 +57,8 @@ View v=inflater.inflate(R.layout.fragment_accepted_order, container, false);
         recyclerView.setAdapter(adapter);
         return v;
     }
-
+        @Override public void onDestroyView() {
+                super.onDestroyView();
+                unbinder.unbind();
+        }
 }

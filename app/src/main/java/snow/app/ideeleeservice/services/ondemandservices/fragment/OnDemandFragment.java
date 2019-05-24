@@ -12,21 +12,28 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.services.deliveryservices.adapter.DeliveryFragmentAdapter;
 import snow.app.ideeleeservice.servicesnew.OnDemandServices;
 
 
 public class OnDemandFragment extends Fragment {
+    @BindView(R.id.recyclerView_ondemand)
     RecyclerView recyclerView;
     ArrayList<String> serviceproviderlist;
+    @BindView(R.id.btn)
     Button btn;
+    private Unbinder unbinder;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v=inflater.inflate(R.layout.fragment_on_demand, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView_ondemand);
+        View v = inflater.inflate(R.layout.fragment_on_demand, container, false);
+        unbinder = ButterKnife.bind(this, v);
         serviceproviderlist = new ArrayList<>();
 
         recyclerView.setHasFixedSize(true);
@@ -50,7 +57,7 @@ public class OnDemandFragment extends Fragment {
         serviceproviderlist.add("DF");
         serviceproviderlist.add("DF");
 
-        btn=v.findViewById(R.id.btn);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,5 +69,9 @@ public class OnDemandFragment extends Fragment {
         return v;
     }
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
 }

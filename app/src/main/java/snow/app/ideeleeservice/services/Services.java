@@ -11,29 +11,27 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.adapter.OrderAdapter;
 import snow.app.ideeleeservice.services.adapter.ManageServicesAdapter;
 
 public class Services extends AppCompatActivity {
     ManageServicesAdapter adapter;
-    ViewPager viewPager;
-TabLayout tabLayout;
-    ImageView backbutton1;
-    ImageView notification;
-    TextView title;
+   @BindView
+  (R.id.pager) ViewPager viewPager;
+@BindView(R.id.tab_layout) TabLayout tabLayout;
+   @BindView(R.id.back) ImageView backbutton1;
+    @BindView(R.id.notification) ImageView notification;
+    @BindView(R.id.title) TextView title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services);
-
-         tabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        ButterKnife.bind(this);
         tabLayout.addTab(tabLayout.newTab().setText("On Demand Services"));
         tabLayout.addTab(tabLayout.newTab().setText("Delivery Services"));
-
-        backbutton1=(ImageView)findViewById(R.id.back);
-        notification=(ImageView)findViewById(R.id.notification);
-        title=(TextView) findViewById(R.id.title);
         title.setText("Manage Services");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,10 +39,6 @@ TabLayout tabLayout;
                 onBackPressed();
             }
         });
-
-
-
-        viewPager = (ViewPager)findViewById(R.id.pager);
         adapter = new ManageServicesAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);

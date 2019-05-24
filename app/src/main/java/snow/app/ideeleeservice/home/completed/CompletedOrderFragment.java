@@ -10,19 +10,25 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.accepted.adapter.AcceptedJobAdapter;
 import snow.app.ideeleeservice.home.completed.adapter.JobCompletedAdapter;
 
 public class CompletedOrderFragment extends Fragment {
+    @BindView
+            (R.id.recyclerView_completed)
     RecyclerView recyclerView;
     ArrayList<String> serviceproviderlist;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_completed_order, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView_completed);
+        unbinder = ButterKnife.bind(this, v);
         serviceproviderlist = new ArrayList<>();
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
@@ -51,4 +57,9 @@ public class CompletedOrderFragment extends Fragment {
         return v;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
 }

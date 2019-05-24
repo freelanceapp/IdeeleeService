@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.servicepackages.MyPackageDetails;
 import snow.app.ideeleeservice.services.deliveryservices.fragments.DeliveryFragment;
@@ -46,7 +48,7 @@ public class OnDemandServiceAdapter extends RecyclerView.Adapter<OnDemandService
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         //getting the product of the specified position
 
-holder.cat.setText(productList.get(position));
+        holder.cat.setText(productList.get(position));
 
     }
 
@@ -59,22 +61,25 @@ holder.cat.setText(productList.get(position));
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-TextView cat;
+        @BindView(R.id.cat)
+        TextView cat;
+
         public ProductViewHolder(View itemView) {
             super(itemView);
 
-cat=itemView.findViewById(R.id.cat);
-itemView.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-       Intent intent=new Intent(mCtx, MoreOnDemand.class);
-       mCtx.startActivity(intent);
-    }
-});
+            ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mCtx, MoreOnDemand.class);
+                    mCtx.startActivity(intent);
+                }
+            });
 
         }
     }
-    public  void showSubCatDialog(){
+
+    public void showSubCatDialog() {
         final Dialog dialog = new Dialog(mCtx);
         dialog.setContentView(R.layout.subcatdialog);
         dialog.setTitle("Title");
@@ -86,8 +91,6 @@ itemView.setOnClickListener(new View.OnClickListener() {
 //        TextView text = (TextView) dialog.findViewById(R.id.text2);
 //        text.setText("Text view 2");
         dialog.show();
-
-
 
 
     }

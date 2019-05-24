@@ -7,21 +7,26 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 public class StoreDetails extends AppCompatActivity {
+    @BindView
+            (R.id.back)
     ImageView backbutton1;
+    @BindView(R.id.notification)
     ImageView notification;
+    @BindView(R.id.title)
     TextView title;
+    @BindView(R.id.add)
     Button add;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store_details);
-        backbutton1=(ImageView)findViewById(R.id.back);
-        notification=(ImageView)findViewById(R.id.notification);
-        title=(TextView) findViewById(R.id.title);
-        add=findViewById(R.id.add);
+        ButterKnife.bind(this);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

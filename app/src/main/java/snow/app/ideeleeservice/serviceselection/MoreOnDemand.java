@@ -9,28 +9,36 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.serviceselection.adapter.OnDemandAdapter;
 import snow.app.ideeleeservice.servicesnew.SubCatList;
 
 public class MoreOnDemand extends AppCompatActivity {
+    @BindView
+            (R.id.rv)
     RecyclerView rv;
     OnDemandAdapter onDemandAdapter;
-        TextView title,txt_continue;
-        TextView request_now;
+    @BindView(R.id.title)
+    TextView title;
+    @BindView(R.id.txt_continue)
+    TextView txt_continue;
+    @BindView(R.id.request_now)
+    TextView request_now;
+@BindView(R.id.back)
+    ImageView backbutton1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_on_demand);
-        rv = (RecyclerView) findViewById(R.id.rv);
-        title =  findViewById(R.id.title);
-        request_now =  findViewById(R.id.request_now);
-        txt_continue =  findViewById(R.id.txt_continue);
+        ButterKnife.bind(this);
         //title.setText(getString(R.string.on_demand));
         title.setText("Car Rental");
         rv.setLayoutManager(new LinearLayoutManager(this));
@@ -54,16 +62,16 @@ public class MoreOnDemand extends AppCompatActivity {
         productList.add("Van");
 
 
-txt_continue.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        startActivity(new Intent(MoreOnDemand.this, SubCatList.class));
-    }
-});
+        txt_continue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MoreOnDemand.this, SubCatList.class));
+            }
+        });
         onDemandAdapter = new OnDemandAdapter(this, productList);
         rv.setAdapter(onDemandAdapter);
         onDemandAdapter.notifyDataSetChanged();
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -75,15 +83,15 @@ txt_continue.setOnClickListener(new View.OnClickListener() {
                 final Dialog dialog = new Dialog(MoreOnDemand.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.request_category_pop);
-                Button submit=dialog.findViewById(R.id.submit);
+                Button submit = dialog.findViewById(R.id.submit);
                 submit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         dialog.dismiss();
                     }
                 });
-                int width = (int)(getResources().getDisplayMetrics().widthPixels*0.90);
-                int height = (int)(getResources().getDisplayMetrics().heightPixels*.50);
+                int width = (int) (getResources().getDisplayMetrics().widthPixels * 0.90);
+                int height = (int) (getResources().getDisplayMetrics().heightPixels * .50);
 
                 dialog.getWindow().setLayout(width, height);
                 dialog.show();

@@ -10,6 +10,8 @@ import android.widget.CheckBox;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 
@@ -18,11 +20,8 @@ public class OnDemandAdapter extends RecyclerView.Adapter<OnDemandAdapter.Produc
 
     //this context we will use to inflate the layout
     private Context mCtx;
-
-    //we are storing all the products in a list
     private List<String> productList;
 
-    //getting the context and product list with constructor
     public OnDemandAdapter(Context mCtx, List<String> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
@@ -42,10 +41,10 @@ public class OnDemandAdapter extends RecyclerView.Adapter<OnDemandAdapter.Produc
         holder.check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (holder.check.isChecked()){
-                    holder.check.setTextColor(ContextCompat.getColor(mCtx,R.color.green));
-                }else {
-                    holder.check.setTextColor(ContextCompat.getColor(mCtx,R.color.txt_light));
+                if (holder.check.isChecked()) {
+                    holder.check.setTextColor(ContextCompat.getColor(mCtx, R.color.green));
+                } else {
+                    holder.check.setTextColor(ContextCompat.getColor(mCtx, R.color.txt_light));
                 }
             }
         });
@@ -62,12 +61,13 @@ public class OnDemandAdapter extends RecyclerView.Adapter<OnDemandAdapter.Produc
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.check)
         CheckBox check;
 
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-            check=itemView.findViewById(R.id.check);
+            ButterKnife.bind(this, itemView);
 
         }
     }

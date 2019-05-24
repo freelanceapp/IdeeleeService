@@ -10,19 +10,24 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.payments.received.adapter.ReceivedFragmentAdapter;
 
 public class ReceivedFragment extends Fragment {
-    RecyclerView recyclerView;
+   @BindView
+  (R.id.recyclerView_received) RecyclerView recyclerView;
     ArrayList<String> serviceproviderlist;
+    private Unbinder unbinder;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_received, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView_received);
+        unbinder= ButterKnife.bind(this,v);
         serviceproviderlist = new ArrayList<>();
 
         recyclerView.setHasFixedSize(true);
@@ -50,6 +55,10 @@ public class ReceivedFragment extends Fragment {
         return v;
     }
 
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
+}
 

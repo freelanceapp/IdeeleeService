@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 
@@ -34,6 +36,7 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.accepted_orders_row, parent, false);
+
         return new ProductViewHolder(view);
     }
 
@@ -52,8 +55,8 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
             holder.txt_callnow.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
             holder.txt_callnow.setGravity(Gravity.CENTER);
             holder.viewdetails.setText("Dispatched");
-            holder.viewdetails.setBackground(ContextCompat.getDrawable(mCtx,R.drawable.round_corner_green_solid));
-            holder.viewdetails.setTextColor(ContextCompat.getColor(mCtx,R.color.white));
+            holder.viewdetails.setBackground(ContextCompat.getDrawable(mCtx, R.drawable.round_corner_green_solid));
+            holder.viewdetails.setTextColor(ContextCompat.getColor(mCtx, R.color.white));
 
         }
 
@@ -67,20 +70,27 @@ public class AcceptedJobAdapter extends RecyclerView.Adapter<AcceptedJobAdapter.
 
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView ordersummary, title, by, time_accepted, txt_callnow, name, viewdetails;
+        @BindView
+                (R.id.ordersummary_accepted)
+        TextView ordersummary;
+        @BindView(R.id.title_accepted)
+        TextView title;
+        @BindView(R.id.txt_by)
+        TextView by;
+        @BindView(R.id.time_accepted)
+        TextView time_accepted;
+        @BindView(R.id.callnow_accepted)
+        TextView txt_callnow;
+        @BindView(R.id.name)
+        TextView name;
+        @BindView(R.id.viewdetails_accepted)
+        TextView viewdetails;
 
 
         public ProductViewHolder(View itemView) {
+
             super(itemView);
-            ordersummary = itemView.findViewById(R.id.ordersummary_accepted);
-            title = itemView.findViewById(R.id.title_accepted);
-            time_accepted = itemView.findViewById(R.id.time_accepted);
-            by = itemView.findViewById(R.id.txt_by);
-            name = itemView.findViewById(R.id.name);
-            viewdetails = itemView.findViewById(R.id.viewdetails_accepted);
-            txt_callnow = itemView.findViewById(R.id.callnow_accepted);
-
-
+            ButterKnife.bind(this,itemView);
 
         }
     }

@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.serviceselection.MoreOnDemand;
 
@@ -62,14 +64,12 @@ public class ActiveServiceAdapter extends RecyclerView.Adapter<ActiveServiceAdap
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-    TextView service_name;
-    TextView add_btn;
-    TextView edit_btn;
+    @BindView(R.id.service_name) TextView service_name;
+    @BindView(R.id.add_btn) TextView add_btn;
+    @BindView(R.id.edit_btn) TextView edit_btn;
         public ProductViewHolder(View itemView) {
             super(itemView);
-            service_name=itemView.findViewById(R.id.service_name);
-            add_btn=itemView.findViewById(R.id.add_btn);
-            edit_btn=itemView.findViewById(R.id.edit_btn);
+            ButterKnife.bind(this,itemView);
             add_btn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

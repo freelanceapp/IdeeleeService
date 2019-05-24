@@ -13,8 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".servicesnew.SubCatList"></activity>
-
+        <activity android:name=".coupons.SelectCouponCat"></activity>
+        <activity android:name=".servicesnew.SubCatList" />
         <activity android:name=".servicesnew.OnDemandServices" />
         <activity android:name=".payments.Payments" />
         <activity android:name=".home.OrderDetails" />

@@ -9,21 +9,21 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 public class AddProductDetails extends AppCompatActivity {
-    ImageView backbutton1;
-    ImageView notification;
-    TextView title;
+   @BindView
+  (R.id.back) ImageView backbutton1;
+   @BindView(R.id.notification) ImageView notification;
+   @BindView(R.id.title) TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product_details);
-        backbutton1=(ImageView)findViewById(R.id.back);
-        notification=(ImageView)findViewById(R.id.notification);
-
-        title=(TextView) findViewById(R.id.title);
+        ButterKnife.bind(this);
         title.setText(getString(R.string.pd_details));
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override

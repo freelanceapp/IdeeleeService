@@ -8,22 +8,22 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 public class AddProduct extends AppCompatActivity {
 
-    ImageView notification;
-    TextView title;
-    Button continue_addproduct;
+   @BindView(R.id.title) TextView title;
+   @BindView(R.id.continue_addproduct) Button continue_addproduct;
+   @BindView(R.id.back) ImageView backbutton1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_product);
-
-        title=(TextView) findViewById(R.id.title);
-        continue_addproduct=(Button) findViewById(R.id.continue_addproduct);
+        ButterKnife.bind(this);
         title.setText(getString(R.string.add_product));
-        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

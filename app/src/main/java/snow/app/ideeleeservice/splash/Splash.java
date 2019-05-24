@@ -12,7 +12,7 @@ import snow.app.ideeleeservice.login.Login;
 
 public class Splash extends Activity {
 
-    private ProgressBar mProgress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

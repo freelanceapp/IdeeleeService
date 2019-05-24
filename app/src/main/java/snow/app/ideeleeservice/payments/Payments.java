@@ -9,28 +9,27 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.payments.adapter.PaymentsAdapter;
 import snow.app.ideeleeservice.services.adapter.ManageServicesAdapter;
 
 public class Payments extends AppCompatActivity {
     PaymentsAdapter adapter;
-    ViewPager viewPager;
+    @BindView(R.id.pager) ViewPager viewPager;
 
-    ImageView backbutton1;
-    ImageView notification;
-    TextView title;
-    TabLayout tabLayout;
+    @BindView(R.id.back) ImageView backbutton1;
+    @BindView(R.id.notification) ImageView notification;
+    @BindView(R.id.title) TextView title;
+   @BindView(R.id.tab_layout) TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payments);
-         tabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        ButterKnife.bind(this);
         tabLayout.addTab(tabLayout.newTab().setText("Received"));
         tabLayout.addTab(tabLayout.newTab().setText("Withdrawl"));
-        backbutton1=(ImageView)findViewById(R.id.back);
-        notification=(ImageView)findViewById(R.id.notification);
-        title=(TextView) findViewById(R.id.title);
         title.setText("Payments");
         backbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,10 +37,6 @@ public class Payments extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-
-
-        viewPager = (ViewPager)findViewById(R.id.pager);
         adapter = new PaymentsAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);

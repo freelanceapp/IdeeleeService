@@ -11,16 +11,19 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.home.HomeNavigation;
 import snow.app.ideeleeservice.serviceselection.adapter.DeliveryServiceAdapter;
 import snow.app.ideeleeservice.serviceselection.adapter.OnDemandAdapter;
 
 public class ServiceSelectorActivity extends AppCompatActivity {
-    RecyclerView ondemand_rv,delivery_rv;
-    TextView more_delivery;
-    TextView more_ondemand;
-    TextView skip;
+    @BindView(R.id.ondemand_rv) RecyclerView ondemand_rv;
+    @BindView(R.id.delivery_rv) RecyclerView delivery_rv;
+    @BindView(R.id.more_delivery) TextView more_delivery;
+    @BindView(R.id.more_ondemand) TextView more_ondemand;
+    @BindView(R.id.skip) TextView skip;
     OnDemandAdapter onDemandAdapter;
     DeliveryServiceAdapter deliveryServiceAdapter;
     List<String> productList= new ArrayList<>();
@@ -29,11 +32,7 @@ public class ServiceSelectorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_selector);
-        ondemand_rv=findViewById(R.id.ondemand_rv);
-        delivery_rv=findViewById(R.id.delivery_rv);
-        more_delivery=findViewById(R.id.more_delivery);
-        more_ondemand=findViewById(R.id.more_ondemand);
-        skip=findViewById(R.id.skip);
+        ButterKnife.bind(this);
         ondemand_rv.setLayoutManager(new LinearLayoutManager(this));
         delivery_rv.setLayoutManager(new LinearLayoutManager(this));
         productList.add("Home Cleaning");

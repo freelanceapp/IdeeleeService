@@ -13,6 +13,8 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import snow.app.ideeleeservice.R;
 
 
@@ -100,14 +102,15 @@ public class DeliveryServiceAdapter extends RecyclerView.Adapter<DeliveryService
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
+        @BindView(R.id.check)
         CheckBox check;
+        @BindView(R.id.child_view)
         LinearLayout child_view;
 
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-            check = itemView.findViewById(R.id.check);
-            child_view = itemView.findViewById(R.id.child_view);
+            ButterKnife.bind(this, itemView);
 
         }
     }
