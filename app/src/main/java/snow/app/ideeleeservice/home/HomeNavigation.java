@@ -61,6 +61,14 @@ public class HomeNavigation extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View v = navigationView.getHeaderView(0);
         ImageView img = v.findViewById(R.id.img);
+        v.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setFragment(new ProfileFragment(), "Edit Profile");
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+            }
+        });
         WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
         final DisplayMetrics displayMetrics = new DisplayMetrics();
         wm.getDefaultDisplay().getMetrics(displayMetrics);

@@ -222,4 +222,10 @@
     <string name="title_activity_sub_category_list">SubCategoryLIst</string>
     <string name="request_new">Request New</string>
     <string name="proceed">Proceed</string>
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="facebook_app_id">371329030394186</string>
+    <string name="fb_login_protocol_scheme">fb371329030394186</string>
 </resources>

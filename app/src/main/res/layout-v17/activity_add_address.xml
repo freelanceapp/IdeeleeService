@@ -68,6 +68,9 @@
                     android:background="@drawable/grey_divider"
                     android:fontFamily="@font/regular"
                     android:hint="Address"
+                    android:id="@+id/address"
+                    android:editable="false"
+                    android:clickable="false"
                     android:padding="@dimen/small_padding"
                     android:textColor="@color/black"
                     android:textSize="@dimen/normal_text" />
