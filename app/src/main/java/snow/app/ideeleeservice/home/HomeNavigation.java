@@ -1,6 +1,7 @@
 package snow.app.ideeleeservice.home;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -18,23 +19,33 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import snow.app.ideeleeservice.AppUtils.CircleTransform;
 import snow.app.ideeleeservice.R;
 import snow.app.ideeleeservice.address.AddAddress;
+import snow.app.ideeleeservice.api_request_retrofit.ApiService;
+import snow.app.ideeleeservice.api_request_retrofit.retrofit_client.ApiClient;
 import snow.app.ideeleeservice.coupons.CouponsListing;
+import snow.app.ideeleeservice.extrafiles.OneTimeLogin;
 import snow.app.ideeleeservice.forgot.EditPassword;
 import snow.app.ideeleeservice.help.HelpActivity;
 import snow.app.ideeleeservice.home.homefiles.OrderHomeFragment;
+import snow.app.ideeleeservice.login.Login;
 import snow.app.ideeleeservice.payments.Payments;
 import snow.app.ideeleeservice.products.productlist.ProductListActivity;
 import snow.app.ideeleeservice.profile.ProfileFragment;
-import snow.app.ideeleeservice.servicepricing.ServicePricingActivity;
-import snow.app.ideeleeservice.splash.Splash;
+import snow.app.ideeleeservice.responses.logoutres.LogoutRes;
 import snow.app.ideeleeservice.servicepackages.ServicePackages;
 import snow.app.ideeleeservice.services.Services;
 import snow.app.ideeleeservice.stores.Stores;
@@ -46,12 +57,21 @@ public class HomeNavigation extends AppCompatActivity
     @BindView(R.id.nav_view)
     NavigationView navigationView;
 
+    ApiService apiService;
+    String device_token;
+    HashMap<String, String> map;
+    OneTimeLogin oneTimeLogin;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_navigation);
         ButterKnife.bind(this);
         toolbar.inflateMenu(R.menu.home_navigation);
+        oneTimeLogin = new OneTimeLogin(HomeNavigation.this);
+        apiService = ApiClient.getClient(getApplicationContext())
+                .create(ApiService.class);
         setFragment(new OrderHomeFragment(), "Home");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -145,7 +165,16 @@ public class HomeNavigation extends AppCompatActivity
         } else if (id == R.id.editpassword) {
             startActivity(new Intent(HomeNavigation.this, EditPassword.class));
         } else if (id == R.id.logout) {
-            startActivity(new Intent(HomeNavigation.this, Splash.class));
+//            oneTimeLogin.setFirstTimeLaunch(true);
+//            Toast.makeText(this, "Successfully logged out", Toast.LENGTH_SHORT).show();
+//            Intent intent_continue = new Intent(HomeNavigation.this, Login.class);
+//            startActivity(intent_continue);
+//            finish();
+
+
+            handleLogout();
+
+
         } else if (id == R.id.add_coupons) {
             startActivity(new Intent(HomeNavigation.this, CouponsListing.class));
         }
@@ -163,4 +192,70 @@ public class HomeNavigation extends AppCompatActivity
                 .replace(R.id.content_frame, fragment, title);
         fragmentTransaction.commit();
     }
+
+
+    public void logoutUser(HashMap<String, String> map) {
+        // showProgress();
+
+        Observer<LogoutRes> observer = apiService.logoutUser(map)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeWith(new Observer<LogoutRes>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(LogoutRes res) {
+                        if (res.getStatus()) {
+
+
+                            oneTimeLogin.setFirstTimeLaunch(true);
+                            Toast.makeText(HomeNavigation.this, res.getMessage(), Toast.LENGTH_SHORT).show();
+
+                            Intent intent_continue = new Intent(HomeNavigation.this, Login.class);
+                            startActivity(intent_continue);
+                            finish();
+                        } else {
+                            Toast.makeText(HomeNavigation.this, res.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+
+                    }
+                });
+
+
+    }
+
+
+    private void handleLogout() {
+
+        SharedPreferences prefs = getSharedPreferences("Login", MODE_PRIVATE);
+        String userid = prefs.getString("userid", "0");
+        String token = prefs.getString("token", "0");
+//        if (userid != null) {
+//
+//        }
+
+
+        map = new HashMap<>();
+        map.put("userid", userid);
+        map.put("token", token);
+
+
+        logoutUser(map);
+    }
+
+
 }

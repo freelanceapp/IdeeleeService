@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.applikeysolutions:cosmocalendar:1.0.4@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cosmocalendar-1.0.4.aar/08325c77e456bcb95b0f5b60dfff561f/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cosmocalendar-1.0.4.aar/08325c77e456bcb95b0f5b60dfff561f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cosmocalendar-1.0.4.aar/08325c77e456bcb95b0f5b60dfff561f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.applikeysolutions/cosmocalendar/1.0.4/18e465e7c337b66b8a40aa99679d562df922da4a/cosmocalendar-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

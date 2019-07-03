@@ -64,77 +64,30 @@
                     android:text="@string/enterotp"
                     android:textColor="@color/black"
                     android:textSize="@dimen/normal_text" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="8">
-
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="@dimen/med_padding"
-                        android:layout_weight="2"
-                        android:background="@drawable/blue_divider"
-                        android:maxLength="1"
-                        android:gravity="center"
-                        android:hint="*"
-                        android:padding="@dimen/small_padding" />
-
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="@dimen/med_padding"
-                        android:layout_weight="2"
-                        android:background="@drawable/blue_divider"
-                        android:maxLength="1"
-                        android:gravity="center"
-                        android:hint="*"
-                        android:padding="@dimen/small_padding" />
-
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="@dimen/med_padding"
-                        android:layout_weight="2"
-                        android:background="@drawable/blue_divider"
-                        android:maxLength="1"
-                        android:gravity="center"
-                        android:hint="*"
-                        android:padding="@dimen/small_padding" />
-
-                    <EditText
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginRight="@dimen/med_padding"
-                        android:layout_weight="2"
-                        android:background="@drawable/blue_divider"
-                        android:maxLength="1"
-                        android:gravity="center"
-                        android:hint="*"
-                        android:padding="@dimen/small_padding" />
-
-
-
-                </LinearLayout>
-
-                <com.alahammad.otp_view.OtpView
-                    android:id="@+id/otp"
+                <com.chaos.view.PinView
+                    android:id="@+id/pinview_otp"
+                    style="@style/PinWidget.PinView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:cursorVisible="true"
+                    android:hint="*"
+                    android:itemBackground="@color/white"
                     android:inputType="number"
-                    android:paddingLeft="-10dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:visibility="gone"
-                    app:otp_number="4" />
+                    android:padding="@dimen/margin_8dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:cursorColor="@color/colorPrimary"
+                    app:cursorWidth="2dp"
+                    app:hideLineWhenFilled="false"
+                    app:itemCount="4"
+                    app:itemHeight="48dp"
+                    app:itemSpacing="@dimen/margin_8dp"
+                    app:itemWidth="@dimen/margin_50dp"
+                    app:lineColor="@color/colorPrimary"
+                    app:lineWidth="1dp"
+                    app:viewType="line" />
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -165,6 +118,7 @@
                         android:layout_marginLeft="@dimen/small_padding"
                         android:gravity="right"
                         android:text="@string/resend_otp"
+                        android:id="@+id/txt_Resend"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/small_txt" />
                 </LinearLayout>

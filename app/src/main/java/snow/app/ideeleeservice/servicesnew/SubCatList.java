@@ -32,7 +32,7 @@ public class SubCatList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_cat_list);
         ButterKnife.bind(this);
-        title.setText("Car Rental");
+        title.setText(getString(R.string.carrental));
         rv.setLayoutManager(new LinearLayoutManager(this));
         List<String> del_list = new ArrayList<>();
         del_list.add("Car Rental");
